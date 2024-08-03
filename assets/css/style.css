@@ -1,29 +1,23 @@
-/* Import Fonts with Font-Display Swap */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-/* General Styles */
 * {
     font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Added to avoid layout shifts */
 }
 
 body {
     background: var(--white-20);
-    scroll-behavior: smooth;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    scroll-behavior: smooth; /* Ensures smooth scrolling */
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-img, video {
-    display: block;
-    max-width: 100%;
-    height: auto; /* Prevent layout shifts due to media */
+.section-padding {
+    padding: 50px;
 }
 
-/* CSS Variables */
 :root {
     --blue: #004080; /* Classic Blue */
     --dark-blue: #002e5d; /* Darker Classic Blue */
@@ -37,7 +31,6 @@ img, video {
     --light-blue: #cce0ff; /* Light Classic Blue */
 }
 
-/* Headings and Text */
 h1 {
     font-size: 50px;
     text-transform: capitalize;
@@ -61,7 +54,6 @@ p {
     color: var(--grey);
 }
 
-/* Buttons */
 button {
     padding: 5px;
     font-size: 18px;
@@ -79,20 +71,20 @@ button:hover {
     letter-spacing: 1px;
 }
 
-/* Reveal Effect */
 .reveal {
     position: relative;
     transform: translateY(150px);
     opacity: 0;
-    transition: opacity 1s ease-out, transform 1s ease-out;
+    transition: all 2s ease;
 }
 
 .reveal.active {
-    transform: translateY(0);
+    transform: translateY(0px);
     opacity: 1;
 }
 
-/* Navbar Section */
+/* Navbar Section  */
+
 .navbar {
     height: 100px;
     background: var(--white);
@@ -149,7 +141,8 @@ button:hover {
     border: 1px solid var(--cobalt-blue);
 }
 
-/* Main Section */
+/* Main Section  */
+
 .main h1 {
     margin-top: 100px;
 }
@@ -161,6 +154,7 @@ button:hover {
 }
 
 /* Carousel Section */
+
 .carousel-item {
     max-height: 100vh;
     min-height: 300px;
@@ -184,6 +178,22 @@ button:hover {
 }
 
 /* Counter Section */
+
+.counter {
+    text-align: center; /* Center counter items */
+}
+
+.counter-element {
+    width: 100px; /* Fixed width for counters */
+    height: 50px; /* Fixed height for counters */
+    display: inline-block; /* Ensure alignment */
+    text-align: center;
+    line-height: 50px; /* Center text vertically */
+    font-size: 2em; /* Adjust font size as needed */
+    background: var(--white); /* Optional background for better visibility */
+    border-radius: 5px; /* Optional border radius */
+}
+
 .counter h2 {
     color: var(--cobalt-blue);
     font-weight: 700;
@@ -205,7 +215,8 @@ button:hover {
     color: var(--black-90);
 }
 
-/* Work Section */
+/* Work Section  */
+
 .work h3 {
     margin-top: 0;
 }
@@ -243,7 +254,8 @@ button:hover {
     color: var(--grey);
 }
 
-/* About Section */
+/* About Section  */
+
 .about p {
     color: var(--grey);
 }
@@ -268,7 +280,8 @@ button:hover {
     color: var(--grey);
 }
 
-/* Service Section */
+/* Service Section  */
+
 .services h3 {
     margin-top: 10px;
 }
@@ -302,7 +315,8 @@ button:hover {
     margin-top: 20px;
 }
 
-/* Project Section */
+/* Project Section  */
+
 .project p {
     color: var(--grey);
 }
@@ -327,7 +341,8 @@ button:hover {
     color: var(--grey);
 }
 
-/* Choose Section */
+/* Choose Section  */
+
 .choose h1 {
     margin-top: 0;
 }
@@ -365,6 +380,7 @@ button:hover {
 }
 
 /* FAQ Section */
+
 .faq h1 {
     margin-top: 0px;
 }
@@ -393,93 +409,73 @@ button:hover {
 }
 
 .accordion li label {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    font-size: 20px;
-    background: var(--cobalt-blue);
-    margin-bottom: 2px;
-    position: relative;
+    background-color: var(--cobalt-blue);
     cursor: pointer;
+    display: block;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 10px;
+    color: var(--white);
+    border-radius: 5px;
 }
 
-label::after {
-    content: "+";
-    font-size: 35px;
-    position: absolute;
-    right: 20px;
-}
-
-input[type="checkbox"] {
+.accordion li input {
     display: none;
 }
 
-input[type="checkbox"]:checked ~ .accordion-content {
-    max-height: 500px;
-    padding: 20px;
-    overflow: hidden;
+.accordion li input:checked ~ .content {
+    max-height: 200px; /* Adjust as needed */
+    padding: 10px;
 }
 
-.accordion-content {
+.accordion li .content {
     max-height: 0;
-    transition: max-height 0.3s ease-out;
     overflow: hidden;
+    padding: 0;
+    transition: max-height 0.3s ease;
 }
 
 /* Contact Section */
+
+.contact h1 {
+    margin-top: 10px;
+}
+
 .contact .contact-form {
     margin-top: 50px;
 }
 
-.contact .contact-form input,
-.contact .contact-form textarea {
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid var(--cobalt-blue);
-    border-radius: 5px;
+.contact .contact-form input {
+    margin-bottom: 10px;
+    font-size: 18px;
 }
 
-.contact .contact-form input:focus,
-.contact .contact-form textarea:focus {
-    border-color: var(--bright-blue);
+.contact .contact-form textarea {
+    margin-bottom: 10px;
+    font-size: 18px;
 }
 
 /* Footer Section */
+
 .footer {
     background: var(--cobalt-blue);
     color: var(--white);
-    text-align: center;
     padding: 20px;
+    text-align: center;
     position: relative;
-    width: 100%;
+    bottom: 0;
 }
 
-.footer img {
-    height: 150px;
-    width: 150px;
-    display: block;
-    margin: 0 auto;
+.footer p {
+    margin: 0;
+    font-size: 14px;
 }
 
-.footer h4 {
+.footer a {
     color: var(--white);
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.footer li {
-    list-style: none;
-}
-
-.footer li a {
     text-decoration: none;
-    color: var(--white-20);
 }
 
-.footer .socials a {
-    color: var(--white-20);
-}
-
-.footer .socials a:hover {
-    color: var(--bright-blue);
+.footer a:hover {
+    text-decoration: underline;
 }
