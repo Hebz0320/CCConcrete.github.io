@@ -174,59 +174,55 @@ button:hover {
 /* Counter Section */
 
 .counter {
-    text-align: center;
-    min-height: 120px; /* Ensure enough space for larger numbers */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    min-height: 120px; /* Ensure enough space for larger numbers */
+    padding: 20px; /* Add padding to prevent text from touching edges */
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
 }
 
 .counter h2 {
-    color: var(--black);
+    color: var(--cobalt-blue);
     font-weight: 700;
-    font-size: 50px;
+    font-size: 3rem; /* Use relative units for better responsiveness */
     margin: 0;
     padding: 0;
     line-height: 1.2; /* Adjust line height for better vertical alignment */
-    display: flex;
-    align-items: baseline; /* Align items to avoid shifting */
 }
 
 .counter span {
-    font-size: 50px;
+    font-size: 3rem; /* Use relative units for better responsiveness */
     font-weight: 300;
-    color: var(--black);
-    margin-right: 5px; /* Space between number and + */
+    color: var(--cobalt-blue);
+    margin-right: 0.2em; /* Space between number and + */
 }
 
 .counter .heading {
-    font-size: 30px;
-    color: var(--dark-gray);
-    margin-top: 10px; /* Add space between number and text */
+    font-size: 1.875rem; /* Use relative units for better responsiveness */
+    color: var(--black-90);
+    margin-top: 0.5em; /* Add space between number and text */
     text-transform: uppercase;
-}
-
-/* Ensure that the counter section does not jitter due to content */
-.counter h2::after {
-    content: none; /* Remove the + symbol if it was added via CSS */
 }
 
 /* Responsive CSS for Counter Section */
 
 @media only screen and (max-width: 767px) {
     .counter h2 {
-        font-size: 40px; /* Reduce font size for smaller screens */
+        font-size: 2.5rem; /* Reduce font size for smaller screens */
     }
 
     .counter span {
-        font-size: 40px; /* Reduce font size for smaller screens */
+        font-size: 2.5rem; /* Reduce font size for smaller screens */
     }
 
     .counter .heading {
-        font-size: 25px; /* Reduce font size for smaller screens */
+        font-size: 1.5rem; /* Reduce font size for smaller screens */
     }
 }
+
 
 /* Work Section  */
 
