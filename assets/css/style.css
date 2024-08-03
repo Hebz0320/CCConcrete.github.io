@@ -185,7 +185,7 @@ button:hover {
 }
 
 .counter h2 {
-    color: var(--cobalt-blue);
+    color: var(--black);
     font-weight: 700;
     font-size: 3rem; /* Use relative units for better responsiveness */
     margin: 0;
@@ -196,13 +196,13 @@ button:hover {
 .counter span {
     font-size: 3rem; /* Use relative units for better responsiveness */
     font-weight: 300;
-    color: var(--cobalt-blue);
+    color: var(--black);
     margin-right: 0.2em; /* Space between number and + */
 }
 
 .counter .heading {
     font-size: 1.875rem; /* Use relative units for better responsiveness */
-    color: var(--black-90);
+    color: var(--dark-gray);
     margin-top: 0.5em; /* Add space between number and text */
     text-transform: uppercase;
 }
