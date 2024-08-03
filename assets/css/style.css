@@ -179,25 +179,23 @@ button:hover {
 /* Counter Section */
 
 .counter {
-    text-align: center; /* Center the content */
-    min-height: 100px; /* Ensure enough space */
-    position: relative; /* Ensure proper positioning */
+    text-align: center;
+    min-height: 120px; /* Ensure enough space for larger numbers */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .counter h2 {
     color: var(--cobalt-blue);
     font-weight: 700;
     font-size: 50px;
-    margin: 0; /* Ensure no additional margins */
-    padding: 0; /* Ensure no additional padding */
+    margin: 0;
+    padding: 0;
     line-height: 1.2; /* Adjust line height for better vertical alignment */
-    transition: all 0.3s ease; /* Smooth transition for content changes */
-}
-
-.counter p {
-    color: var(--grey);
-    margin: 0; /* Remove default margins */
-    padding: 0; /* Remove default padding */
+    display: flex;
+    align-items: baseline; /* Align items to avoid shifting */
 }
 
 .counter span {
@@ -209,7 +207,24 @@ button:hover {
 .counter .heading {
     font-size: 30px;
     color: var(--black-90);
-    margin-top: 10px; /* Add some space between the number and text */
+    margin-top: 10px; /* Add space between number and text */
+    text-transform: uppercase;
+}
+
+/* Adjust padding and spacing to accommodate varying sizes */
+.counter h2 {
+    padding: 5px 0; /* Add padding to maintain spacing */
+}
+
+.counter h2 span {
+    margin-right: 5px; /* Space between number and + */
+}
+
+.counter h2::after {
+    content: "+";
+    font-size: 50px;
+    margin-left: 5px; /* Space between number and + */
+    color: var(--cobalt-blue);
 }
 
 /* Work Section  */
@@ -389,287 +404,62 @@ button:hover {
     color: var(--white);
 }
 
-.accordion p {
-    margin-top: 0;
-    color: var(--white);
+.accordion .card {
+    border-radius: 10px;
+    border: none;
 }
 
-.accordion li {
-    list-style: none;
-    width: 100%;
-    padding: 5px;
+.accordion .card-header {
+    background: var(--dark-blue);
+    border-radius: 10px;
 }
 
-.accordion li label:hover {
-    color: var(--cobalt-blue);
-    background-color: var(--white);
-}
-
-.accordion li label {
-    display: flex;
-    align-items: center;
-    padding: 20px;
+.accordion .card-header button {
     font-size: 20px;
-    background: var(--cobalt-blue);
-    margin-bottom: 2px;
-    position: relative;
-    cursor: pointer;
-}
-
-label::after {
-    content: "+";
-    font-size: 35px;
-    position: absolute;
-    right: 20px;
-    transition: transform 0.5s;
-}
-
-input[type='radio'] {
-    display: none;
-}
-
-.accordion .content {
-    background: var(--cobalt-blue);
+    color: var(--white);
+    font-weight: 500;
+    padding: 10px 20px;
+    width: 100%;
     text-align: left;
-    padding: 0 20px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s, padding 0.5s;
-}
-
-.accordion input[type='radio']:checked+label+.content {
-    max-height: 600px;
-    padding: 30px 20px;
-}
-
-.accordion input[type='radio']:checked+label::after {
-    transform: rotate(135deg);
-}
-
-/* Team Section  */
-
-.team .card {
-    margin-top: 50px;
+    background: var(--dark-blue);
     border: none;
+    border-radius: 10px;
 }
 
-.team .card:hover {
-    box-shadow: 5px 5px 10px rgba(98, 98, 102, 0.7);
-    transform: scale(1.1);
-    border: none;
-}
-
-.team .card h4 {
-    font-size: 25px;
-    margin-top: 40px;
-    color: var(--cobalt-blue);
-}
-
-.team .card p {
-    font-size: 18px;
-    color: var(--grey);
-    margin-top: 10px;
-}
-
-.team .card i {
-    color: var(--bright-blue);
-    cursor: pointer;
-}
-
-.team .card i:hover {
-    color: var(--cobalt-blue);
-}
-
-/* Subscription Section */
-
-.subscription {
+.accordion .card-header button.collapsed {
     background: var(--cobalt-blue);
-    padding: 100px;
-}
-
-.subscription h1,
-.subscription p {
     color: var(--white);
-    margin-top: 10px;
 }
 
-.subscription input {
-    margin-top: 50px;
-    width: 30%;
-    height: 50px;
-    padding: 20px;
-    color: var(--dark-blue);
-}
-
-.subscription button {
-    color: var(--white);
-    background: transparent;
-    border: 1px solid var(--white);
-    height: 50px;
-    width: 100px;
-    margin-left: 10px;
-}
-
-.subscription button:hover {
+.accordion .card-body {
     background: var(--white);
-    color: var(--cobalt-blue);
-}
-
-/* Contact Section */
-
-.contact p {
-    color: var(--grey);
-}
-
-.contact input {
-    height: 50px;
-    padding: 20px;
-    color: var(--dark-blue);
-    background: var(--white-20);
-    border: 1px solid var(--cobalt-blue);
-}
-
-.contact textarea {
-    border: none;
-    background: var(--white-20);
-    border: 1px solid var(--cobalt-blue);
-    color: var(--dark-blue);
-}
-
-.contact button {
-    margin-left: 220px;
-    margin-top: 20px;
-}
-
-.contact img {
-    height: 200px;
-    width: 200px;
-    margin-left: 100px;
-    border-radius: 50%;
-}
-
-.contact p {
-    margin-top: 20px;
+    color: var(--black);
+    padding: 15px 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 /* Footer Section */
 
 .footer {
-    background: var(--cobalt-blue);
+    background: var(--dark-blue);
     color: var(--white);
+    padding: 50px 0;
+    text-align: center;
 }
 
-.footer img {
-    height: 200px;
-    width: 200px;
-}
-
-.footer h4 {
+.footer .social-icons a {
     color: var(--white);
-    font-size: 30px;
-    margin-bottom: 20px;
+    font-size: 25px;
+    margin: 0 10px;
+    display: inline-block;
 }
 
-.footer li {
-    list-style: none;
-}
-
-.footer li a {
-    text-decoration: none;
-    color: var(--white-20);
-}
-
-.footer .socials a {
-    color: var(--white-20);
-}
-
-.footer .socials a:hover {
+.footer .social-icons a:hover {
     color: var(--bright-blue);
 }
 
-/* Responsive CSS  */
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    .button {
-        margin-left: 0;
-    }
-    .navbar {
-        height: 150px;
-    }
-    .navbar-nav {
-        text-align: center;
-        background-color: var(--white);
-    }
-    .img-area img {
-        width: 100%;
-    }
-    .main h1 {
-        margin-top: 150px;
-    }
-    .main p {
-        margin-top: 10px;
-    }
-    .counter {
-        text-align: center;
-    }
-    .subscription input {
-        width: 70%;
-    }
-}
-
-@media only screen and (max-width: 991px) {
-    .navbar-nav {
-        text-align: center;
-        background-color: var(--light-blue);
-        height: 35vh;
-    }
-    .navbar {
-        height: 150px;
-    }
-    .footer {
-        text-align: center;
-    }
-}
-
-@media only screen and (max-width: 767px) {
-    .button {
-        margin-left: 0;
-    }
-    .navbar {
-        height: 150px;
-    }
-    .navbar-nav {
-        text-align: center;
-        background-color: var(--white);
-        width: 100%;
-        height: 30vh;
-    }
-    .main h1 {
-        margin-top: 150px;
-    }
-
-    .main p {
-        margin-top: 10px;
-    }
-    .counter {
-        text-align: center;
-    }
-    .work .card {
-        margin-top: 10px;
-    }
-    .carousel li {
-        background: var(--bright-blue);
-    }
-    .carousel li.active {
-        background: var(--cobalt-blue);
-    }
-    .about-text {
-        padding-top: 50px;
-    }
-    .subscription input {
-        width: 50%;
-    }
-    .footer {
-        text-align: center;
-    }
+.footer p {
+    font-size: 18px;
+    margin-top: 20px;
 }
