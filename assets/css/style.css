@@ -212,6 +212,22 @@ button:hover {
     content: none; /* Remove the + symbol if it was added via CSS */
 }
 
+/* Responsive CSS for Counter Section */
+
+@media only screen and (max-width: 767px) {
+    .counter h2 {
+        font-size: 40px; /* Reduce font size for smaller screens */
+    }
+
+    .counter span {
+        font-size: 40px; /* Reduce font size for smaller screens */
+    }
+
+    .counter .heading {
+        font-size: 25px; /* Reduce font size for smaller screens */
+    }
+}
+
 /* Work Section  */
 
 .work h3 {
