@@ -514,36 +514,69 @@ button:hover {
 /* Footer Section */
 
 .footer {
-    background: var(--dark-gray); /* Updated to Dark Gray */
+    background: var(--dark-gray); /* Dark Gray background */
     color: var(--white);
+    text-align: center; /* Center text alignment */
+    padding: 50px 20px; /* Add padding for spacing */
+    box-sizing: border-box; /* Ensure padding is included in total width and height */
 }
 
 .footer img {
-    height: 200px;
-    width: 200px;
+    height: 150px; /* Adjust size to better fit the footer */
+    width: 150px; /* Adjust size to better fit the footer */
+    margin-bottom: 20px; /* Add space below the image */
 }
 
 .footer h4 {
     color: var(--white);
-    font-size: 30px;
+    font-size: 1.875rem; /* Use relative units for better responsiveness */
     margin-bottom: 20px;
 }
 
 .footer li {
     list-style: none;
+    margin-bottom: 10px; /* Add space between list items */
 }
 
 .footer li a {
     text-decoration: none;
     color: var(--white-20);
+    font-size: 1rem; /* Adjust font size for readability */
 }
 
 .footer .socials a {
     color: var(--white-20);
+    margin: 0 10px; /* Add horizontal spacing between social icons */
+    font-size: 1.25rem; /* Adjust icon size for better visibility */
 }
 
 .footer .socials a:hover {
     color: var(--bright-blue);
+}
+
+/* Responsive CSS for Footer Section */
+
+@media only screen and (max-width: 767px) {
+    .footer {
+        padding: 30px 10px; /* Adjust padding for smaller screens */
+    }
+
+    .footer img {
+        height: 100px; /* Reduce image size for smaller screens */
+        width: 100px; /* Reduce image size for smaller screens */
+    }
+
+    .footer h4 {
+        font-size: 1.5rem; /* Reduce font size for smaller screens */
+    }
+
+    .footer li a {
+        font-size: 0.875rem; /* Reduce font size for smaller screens */
+    }
+
+    .footer .socials a {
+        font-size: 1rem; /* Adjust icon size for smaller screens */
+    }
 }
 
 /* Responsive CSS  */
