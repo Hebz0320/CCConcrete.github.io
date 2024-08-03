@@ -1,23 +1,29 @@
+/* Import Fonts with Font-Display Swap */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+/* General Styles */
 * {
     font-family: 'Poppins', sans-serif;
-    box-sizing: border-box; /* Added to avoid layout shifts */
+    box-sizing: border-box;
 }
 
 body {
     background: var(--white-20);
-    scroll-behavior: smooth; /* Ensures smooth scrolling */
+    scroll-behavior: smooth;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-.section-padding {
-    padding: 50px;
+img, video {
+    display: block;
+    max-width: 100%;
+    height: auto; /* Prevent layout shifts due to media */
 }
 
+/* CSS Variables */
 :root {
     --blue: #004080; /* Classic Blue */
     --dark-blue: #002e5d; /* Darker Classic Blue */
@@ -31,6 +37,7 @@ html {
     --light-blue: #cce0ff; /* Light Classic Blue */
 }
 
+/* Headings and Text */
 h1 {
     font-size: 50px;
     text-transform: capitalize;
@@ -54,6 +61,7 @@ p {
     color: var(--grey);
 }
 
+/* Buttons */
 button {
     padding: 5px;
     font-size: 18px;
@@ -71,20 +79,20 @@ button:hover {
     letter-spacing: 1px;
 }
 
+/* Reveal Effect */
 .reveal {
     position: relative;
     transform: translateY(150px);
     opacity: 0;
-    transition: all 2s ease;
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 .reveal.active {
-    transform: translateY(0px);
+    transform: translateY(0);
     opacity: 1;
 }
 
-/* Navbar Section  */
-
+/* Navbar Section */
 .navbar {
     height: 100px;
     background: var(--white);
@@ -141,8 +149,7 @@ button:hover {
     border: 1px solid var(--cobalt-blue);
 }
 
-/* Main Section  */
-
+/* Main Section */
 .main h1 {
     margin-top: 100px;
 }
@@ -154,7 +161,6 @@ button:hover {
 }
 
 /* Carousel Section */
-
 .carousel-item {
     max-height: 100vh;
     min-height: 300px;
@@ -178,7 +184,6 @@ button:hover {
 }
 
 /* Counter Section */
-
 .counter h2 {
     color: var(--cobalt-blue);
     font-weight: 700;
@@ -200,8 +205,7 @@ button:hover {
     color: var(--black-90);
 }
 
-/* Work Section  */
-
+/* Work Section */
 .work h3 {
     margin-top: 0;
 }
@@ -239,8 +243,7 @@ button:hover {
     color: var(--grey);
 }
 
-/* About Section  */
-
+/* About Section */
 .about p {
     color: var(--grey);
 }
@@ -265,8 +268,7 @@ button:hover {
     color: var(--grey);
 }
 
-/* Service Section  */
-
+/* Service Section */
 .services h3 {
     margin-top: 10px;
 }
@@ -300,8 +302,7 @@ button:hover {
     margin-top: 20px;
 }
 
-/* Project Section  */
-
+/* Project Section */
 .project p {
     color: var(--grey);
 }
@@ -326,8 +327,7 @@ button:hover {
     color: var(--grey);
 }
 
-/* Choose Section  */
-
+/* Choose Section */
 .choose h1 {
     margin-top: 0;
 }
@@ -365,7 +365,6 @@ button:hover {
 }
 
 /* FAQ Section */
-
 .faq h1 {
     margin-top: 0px;
 }
@@ -409,155 +408,62 @@ label::after {
     font-size: 35px;
     position: absolute;
     right: 20px;
-    transition: transform 0.5s;
 }
 
-input[type='radio'] {
+input[type="checkbox"] {
     display: none;
 }
 
-.accordion .content {
-    background: var(--cobalt-blue);
-    text-align: left;
-    padding: 0 20px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s, padding 0.5s;
-}
-
-.accordion input[type='radio']:checked+label+.content {
-    max-height: 600px;
-    padding: 30px 20px;
-}
-
-.accordion input[type='radio']:checked+label::after {
-    transform: rotate(135deg);
-}
-
-/* Team Section */
-
-.team .card {
-    margin-top: 50px;
-    border: none;
-}
-
-.team .card:hover {
-    box-shadow: 5px 5px 10px rgba(98, 98, 102, 0.7);
-    transform: scale(1.1);
-    border: none;
-}
-
-.team .card h4 {
-    font-size: 25px;
-    margin-top: 40px;
-    color: var(--cobalt-blue);
-}
-
-.team .card p {
-    font-size: 18px;
-    color: var(--grey);
-    margin-top: 10px;
-}
-
-.team .card i {
-    color: var(--bright-blue);
-    cursor: pointer;
-}
-
-.team .card i:hover {
-    color: var(--cobalt-blue);
-}
-
-/* Subscription Section */
-
-.subscription {
-    background: var(--cobalt-blue);
-    padding: 100px;
-}
-
-.subscription h1,
-.subscription p {
-    color: var(--white);
-    margin-top: 10px;
-}
-
-.subscription input {
-    margin-top: 50px;
-    width: 30%;
-    height: 50px;
+input[type="checkbox"]:checked ~ .accordion-content {
+    max-height: 500px;
     padding: 20px;
-    color: var(--dark-blue);
+    overflow: hidden;
 }
 
-.subscription button {
-    color: var(--white);
-    background: transparent;
-    border: 1px solid var(--white);
-    height: 50px;
-    width: 100px;
-    margin-left: 10px;
-}
-
-.subscription button:hover {
-    background: var(--white);
-    color: var(--cobalt-blue);
+.accordion-content {
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+    overflow: hidden;
 }
 
 /* Contact Section */
-
-.contact p {
-    color: var(--grey);
+.contact .contact-form {
+    margin-top: 50px;
 }
 
-.contact input {
-    height: 50px;
-    padding: 20px;
-    color: var(--dark-blue);
-    background: var(--white-20);
+.contact .contact-form input,
+.contact .contact-form textarea {
+    padding: 10px;
+    margin-bottom: 20px;
     border: 1px solid var(--cobalt-blue);
+    border-radius: 5px;
 }
 
-.contact textarea {
-    border: none;
-    background: var(--white-20);
-    border: 1px solid var(--cobalt-blue);
-    color: var(--dark-blue);
-}
-
-.contact button {
-    margin-left: 220px;
-    margin-top: 20px;
-}
-
-.contact img {
-    height: 200px;
-    width: 200px;
-    margin-left: 100px;
-    border-radius: 50%;
-}
-
-.contact p {
-    margin-top: 20px;
+.contact .contact-form input:focus,
+.contact .contact-form textarea:focus {
+    border-color: var(--bright-blue);
 }
 
 /* Footer Section */
-
 .footer {
     background: var(--cobalt-blue);
     color: var(--white);
-    text-align: center; /* Centered text alignment */
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    width: 100%;
 }
 
 .footer img {
-    height: 200px;
-    width: 200px;
-    display: block; /* Ensures image doesn’t cause layout shifts */
-    margin: 0 auto; /* Centering the image */
+    height: 150px;
+    width: 150px;
+    display: block;
+    margin: 0 auto;
 }
 
 .footer h4 {
     color: var(--white);
-    font-size: 30px;
+    font-size: 24px;
     margin-bottom: 20px;
 }
 
@@ -577,100 +483,3 @@ input[type='radio'] {
 .footer .socials a:hover {
     color: var(--bright-blue);
 }
-
-/* Responsive CSS  */
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    .button {
-        margin-left: 0;
-    }
-    .navbar {
-        height: 150px;
-    }
-    .navbar-nav {
-        text-align: center;
-        background-color: var(--white);
-    }
-    .img-area img {
-        width: 100%;
-    }
-    .main h1 {
-        margin-top: 150px;
-    }
-    .main p {
-        margin-top: 10px;
-    }
-    .counter {
-        text-align: center;
-    }
-    .subscription input {
-        width: 70%;
-    }
-}
-
-@media only screen and (max-width: 991px) {
-    .navbar-nav {
-        text-align: center;
-        background-color: var(--light-blue);
-        height: auto; /* Removed fixed height */
-    }
-    .navbar {
-        height: auto; /* Removed fixed height */
-    }
-    .footer {
-        text-align: center;
-        padding: 20px; /* Added padding for better spacing */
-    }
-}
-
-@media only screen and (max-width: 767px) {
-    .button {
-        margin-left: 0;
-    }
-    .navbar {
-        height: auto; /* Removed fixed height */
-    }
-    .navbar-nav {
-        text-align: center;
-        background-color: var(--white);
-        width: 100%;
-        height: auto; /* Removed fixed height */
-    }
-    .main h1 {
-        margin-top: 150px;
-    }
-
-    .main p {
-        margin-top: 10px;
-    }
-    .counter {
-        text-align: center;
-    }
-    .work .card {
-        margin-top: 10px;
-    }
-    .carousel li {
-        background: var(--bright-blue);
-    }
-    .carousel li.active {
-        background: var(--cobalt-blue);
-    }
-    .about-text {
-        padding-top: 50px;
-    }
-    .subscription input {
-        width: 50%;
-    }
-    .footer {
-        text-align: center;
-        padding: 20px; /* Added padding for better spacing */
-    }
-    .footer img {
-        height: 150px; /* Adjusted size for smaller screens */
-        width: 150px;  /* Adjusted size for smaller screens */
-    }
-    .footer h4 {
-        font-size: 24px; /* Smaller font size for better readability on mobile */
-    }
-}
-
