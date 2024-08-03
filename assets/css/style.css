@@ -24,7 +24,7 @@ html {
     --white-20: #f0f4f8; /* Very Light Gray */
     --black: #000000;
     --black-90: #333333;
-    --grey: #7d7d7d; /* Classic Gray */
+    --grey: #4a4a4a; /* Darker Gray */
     --cobalt-blue: #0033cc; /* Cobalt Blue */
     --bright-blue: #0066cc; /* Bright Classic Blue */
     --light-blue: #cce0ff; /* Light Classic Blue */
@@ -178,15 +178,24 @@ button:hover {
 
 /* Counter Section */
 
+.counter {
+    text-align: center;
+    min-height: 120px; /* Ensure enough space for larger numbers */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .counter h2 {
-    content: "+";
     color: var(--cobalt-blue);
     font-weight: 700;
     font-size: 50px;
-}
-
-.counter p {
-    color: var(--grey);
+    margin: 0;
+    padding: 0;
+    line-height: 1.2; /* Adjust line height for better vertical alignment */
+    display: flex;
+    align-items: baseline; /* Align items to avoid shifting */
 }
 
 .counter span {
@@ -198,6 +207,24 @@ button:hover {
 .counter .heading {
     font-size: 30px;
     color: var(--black-90);
+    margin-top: 10px; /* Add space between number and text */
+    text-transform: uppercase;
+}
+
+/* Adjust padding and spacing to accommodate varying sizes */
+.counter h2 {
+    padding: 5px 0; /* Add padding to maintain spacing */
+}
+
+.counter h2 span {
+    margin-right: 5px; /* Space between number and + */
+}
+
+.counter h2::after {
+    content: "+";
+    font-size: 50px;
+    margin-left: 5px; /* Space between number and + */
+    color: var(--cobalt-blue);
 }
 
 /* Work Section  */
