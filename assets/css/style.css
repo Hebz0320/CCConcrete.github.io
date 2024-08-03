@@ -221,7 +221,7 @@ button:hover {
 }
 
 .counter h2::after {
-    content: "+";
+    content: "";
     font-size: 50px;
     margin-left: 5px; /* Space between number and + */
     color: var(--cobalt-blue);
