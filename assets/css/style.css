@@ -179,6 +179,7 @@ button:hover {
 /* Counter Section */
 
 .counter h2 {
+    content: "+";
     color: var(--cobalt-blue);
     font-weight: 700;
     font-size: 50px;
