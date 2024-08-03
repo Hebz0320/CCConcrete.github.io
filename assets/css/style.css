@@ -82,7 +82,7 @@ button:hover {
     opacity: 1;
 }
 
-/* Navbar Section  */
+/* Navbar Section */
 
 .navbar {
     height: 100px;
@@ -140,7 +140,7 @@ button:hover {
     border: 1px solid var(--cobalt-blue);
 }
 
-/* Main Section  */
+/* Main Section */
 
 .main h1 {
     margin-top: 100px;
@@ -155,8 +155,7 @@ button:hover {
 /* Carousel Section */
 
 .carousel-item {
-    max-height: 100vh;
-    min-height: 300px;
+    min-height: 300px; /* Prevents jumping */
 }
 
 .carousel-item img {
@@ -177,6 +176,10 @@ button:hover {
 }
 
 /* Counter Section */
+
+.counter {
+    min-height: 200px; /* Prevents jumping */
+}
 
 .counter h2 {
     color: var(--cobalt-blue);
@@ -199,7 +202,7 @@ button:hover {
     color: var(--black-90);
 }
 
-/* Work Section  */
+/* Work Section */
 
 .work h3 {
     margin-top: 0;
@@ -213,6 +216,7 @@ button:hover {
     margin-top: 100px;
     border-radius: 20px;
     background: var(--white);
+    min-height: 300px; /* Prevents jumping */
 }
 
 .work .card:hover {
@@ -238,7 +242,7 @@ button:hover {
     color: var(--grey);
 }
 
-/* About Section  */
+/* About Section */
 
 .about p {
     color: var(--grey);
@@ -264,7 +268,7 @@ button:hover {
     color: var(--grey);
 }
 
-/* Service Section  */
+/* Service Section */
 
 .services h3 {
     margin-top: 10px;
@@ -281,6 +285,7 @@ button:hover {
 .services .card {
     margin-top: 50px;
     border: none;
+    min-height: 200px; /* Prevents jumping */
 }
 
 .services .card:hover {
@@ -299,7 +304,7 @@ button:hover {
     margin-top: 20px;
 }
 
-/* Project Section  */
+/* Project Section */
 
 .project p {
     color: var(--grey);
@@ -312,6 +317,7 @@ button:hover {
 .project .card {
     margin-top: 50px;
     border: none;
+    min-height: 200px; /* Prevents jumping */
 }
 
 .project .card:hover {
@@ -325,7 +331,7 @@ button:hover {
     color: var(--grey);
 }
 
-/* Choose Section  */
+/* Choose Section */
 
 .choose h1 {
     margin-top: 0;
@@ -345,6 +351,7 @@ button:hover {
 .choose .card {
     margin-top: 50px;
     border: none;
+    min-height: 200px; /* Prevents jumping */
 }
 
 .choose .card i {
@@ -433,11 +440,12 @@ input[type='radio'] {
     transform: rotate(135deg);
 }
 
-/* Team Section  */
+/* Team Section */
 
 .team .card {
     margin-top: 50px;
     border: none;
+    min-height: 200px; /* Prevents jumping */
 }
 
 .team .card:hover {
@@ -472,6 +480,7 @@ input[type='radio'] {
 .subscription {
     background: var(--cobalt-blue);
     padding: 100px;
+    min-height: 200px; /* Prevents jumping */
 }
 
 .subscription h1,
@@ -660,4 +669,3 @@ input[type='radio'] {
         text-align: center;
     }
 }
-
