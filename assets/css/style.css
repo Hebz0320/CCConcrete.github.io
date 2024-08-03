@@ -2,11 +2,12 @@
 
 * {
     font-family: 'Poppins', sans-serif;
+    box-sizing: border-box; /* Added to avoid layout shifts */
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
     background: var(--white-20);
+    scroll-behavior: smooth; /* Ensures smooth scrolling */
 }
 
 html {
@@ -544,11 +545,14 @@ input[type='radio'] {
 .footer {
     background: var(--cobalt-blue);
     color: var(--white);
+    text-align: center; /* Centered text alignment */
 }
 
 .footer img {
     height: 200px;
     width: 200px;
+    display: block; /* Ensures image doesn’t cause layout shifts */
+    margin: 0 auto; /* Centering the image */
 }
 
 .footer h4 {
@@ -608,13 +612,14 @@ input[type='radio'] {
     .navbar-nav {
         text-align: center;
         background-color: var(--light-blue);
-        height: 35vh;
+        height: auto; /* Removed fixed height */
     }
     .navbar {
-        height: 150px;
+        height: auto; /* Removed fixed height */
     }
     .footer {
         text-align: center;
+        padding: 20px; /* Added padding for better spacing */
     }
 }
 
@@ -623,13 +628,13 @@ input[type='radio'] {
         margin-left: 0;
     }
     .navbar {
-        height: 150px;
+        height: auto; /* Removed fixed height */
     }
     .navbar-nav {
         text-align: center;
         background-color: var(--white);
         width: 100%;
-        height: 30vh;
+        height: auto; /* Removed fixed height */
     }
     .main h1 {
         margin-top: 150px;
@@ -658,6 +663,7 @@ input[type='radio'] {
     }
     .footer {
         text-align: center;
+        padding: 20px; /* Added padding for better spacing */
     }
     .footer img {
         height: 150px; /* Adjusted size for smaller screens */
@@ -667,3 +673,4 @@ input[type='radio'] {
         font-size: 24px; /* Smaller font size for better readability on mobile */
     }
 }
+
