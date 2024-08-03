@@ -514,77 +514,80 @@ button:hover {
 /* Footer Section */
 
 .footer {
-    background: var(--dark-gray); /* Dark Gray background */
+    background: var(--dark-gray); /* Updated to Dark Gray */
     color: var(--white);
-    text-align: center; /* Center text alignment */
-    padding: 50px 20px; /* Add padding for spacing */
-    box-sizing: border-box; /* Ensure padding is included in total width and height */
+    padding: 30px 0; /* Added padding for spacing */
+}
+
+.footer .container {
+    max-width: 1200px; /* Limit the maximum width */
+    margin: 0 auto; /* Center the container */
+}
+
+.footer .row {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on small screens */
+    justify-content: center; /* Center items horizontally */
+}
+
+.footer .col-12 {
+    text-align: center; /* Center text for small columns */
 }
 
 .footer img {
-    height: 150px; /* Adjust size to better fit the footer */
-    width: 150px; /* Adjust size to better fit the footer */
-    margin: 0 auto 20px; /* Center the image and add space below */
-    display: block; /* Ensure the image is treated as a block element */
+    height: 100px; /* Reduced size for smaller screens */
+    width: auto; /* Maintain aspect ratio */
 }
 
 .footer h4 {
     color: var(--white);
-    font-size: 1.875rem; /* Use relative units for better responsiveness */
-    margin-bottom: 20px;
+    font-size: 18px; /* Adjusted font size for better mobile display */
+    margin-bottom: 15px; /* Adjusted margin */
 }
 
-.footer li {
-    list-style: none;
-    margin-bottom: 10px; /* Add space between list items */
+.footer ul {
+    padding: 0;
+    margin: 0;
+    list-style: none; /* Remove bullets */
 }
 
-.footer li a {
+.footer ul li {
+    margin: 10px 0; /* Adjusted spacing between list items */
+}
+
+.footer ul li a {
     text-decoration: none;
     color: var(--white-20);
-    font-size: 1rem; /* Adjust font size for readability */
-}
-
-.footer .socials {
-    margin: 20px 0; /* Add space around social icons */
 }
 
 .footer .socials a {
     color: var(--white-20);
-    margin: 0 10px; /* Add horizontal spacing between social icons */
-    font-size: 1.25rem; /* Adjust icon size for better visibility */
-    display: inline-block; /* Ensure icons are inline and centered */
+    margin: 0 10px; /* Added spacing between icons */
+    font-size: 20px; /* Adjusted font size for icons */
 }
 
 .footer .socials a:hover {
     color: var(--bright-blue);
 }
 
-/* Responsive CSS for Footer Section */
-
+/* Responsive CSS */
 @media only screen and (max-width: 767px) {
-    .footer {
-        padding: 30px 10px; /* Adjust padding for smaller screens */
+    .footer .row {
+        text-align: center; /* Center align text on mobile */
+    }
+
+    .footer .col-lg-3 {
+        margin-bottom: 20px; /* Add spacing between columns on mobile */
     }
 
     .footer img {
-        height: 100px; /* Reduce image size for smaller screens */
-        width: 100px; /* Reduce image size for smaller screens */
+        height: 80px; /* Adjust size for smaller screens */
     }
 
     .footer h4 {
-        font-size: 1.5rem; /* Reduce font size for smaller screens */
-    }
-
-    .footer li a {
-        font-size: 0.875rem; /* Reduce font size for smaller screens */
-    }
-
-    .footer .socials a {
-        font-size: 1rem; /* Adjust icon size for smaller screens */
+        font-size: 16px; /* Smaller font size on mobile */
     }
 }
-
 
 /* Responsive CSS  */
 
