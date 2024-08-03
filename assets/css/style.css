@@ -524,7 +524,8 @@ button:hover {
 .footer img {
     height: 150px; /* Adjust size to better fit the footer */
     width: 150px; /* Adjust size to better fit the footer */
-    margin-bottom: 20px; /* Add space below the image */
+    margin: 0 auto 20px; /* Center the image and add space below */
+    display: block; /* Ensure the image is treated as a block element */
 }
 
 .footer h4 {
@@ -544,10 +545,15 @@ button:hover {
     font-size: 1rem; /* Adjust font size for readability */
 }
 
+.footer .socials {
+    margin: 20px 0; /* Add space around social icons */
+}
+
 .footer .socials a {
     color: var(--white-20);
     margin: 0 10px; /* Add horizontal spacing between social icons */
     font-size: 1.25rem; /* Adjust icon size for better visibility */
+    display: inline-block; /* Ensure icons are inline and centered */
 }
 
 .footer .socials a:hover {
@@ -578,6 +584,7 @@ button:hover {
         font-size: 1rem; /* Adjust icon size for smaller screens */
     }
 }
+
 
 /* Responsive CSS  */
 
