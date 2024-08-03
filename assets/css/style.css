@@ -220,7 +220,7 @@ button:hover {
     margin-right: 5px; /* Space between number and + */
 }
 
-.counter h2::after {
+.counter h2 {
     content: "+";
     font-size: 50px;
     margin-left: 5px; /* Space between number and + */
@@ -404,39 +404,61 @@ button:hover {
     color: var(--white);
 }
 
-.accordion .card {
-    border-radius: 10px;
-    border: none;
-}
-
-.accordion .card-header {
-    background: var(--dark-blue);
-    border-radius: 10px;
-}
-
-.accordion .card-header button {
-    font-size: 20px;
+.accordion p {
+    margin-top: 0;
     color: var(--white);
-    font-weight: 500;
-    padding: 10px 20px;
+}
+
+.accordion li {
+    list-style: none;
     width: 100%;
-    text-align: left;
-    background: var(--dark-blue);
-    border: none;
-    border-radius: 10px;
+    padding: 5px;
 }
 
-.accordion .card-header button.collapsed {
+.accordion li label:hover {
+    color: var(--cobalt-blue);
+    background-color: var(--white);
+}
+
+.accordion li label {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 20px;
     background: var(--cobalt-blue);
-    color: var(--white);
+    margin-bottom: 2px;
+    position: relative;
+    cursor: pointer;
 }
 
-.accordion .card-body {
-    background: var(--white);
-    color: var(--black);
-    padding: 15px 20px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+label::after {
+    content: "+";
+    font-size: 35px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+
+input[type='radio'] {
+    display: none;
+}
+
+.accordion .content {
+    background: var(--cobalt-blue);
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.accordion input[type='radio']:checked+label+.content {
+    max-height: 600px;
+    padding: 30px 20px;
+}
+
+.accordion input[type='radio']:checked+label::after {
+    transform: rotate(135deg);
 }
 
 /* Team Section  */
