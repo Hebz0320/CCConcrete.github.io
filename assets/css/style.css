@@ -502,7 +502,7 @@ button:hover {
 /* Footer Section */
 
 .footer {
-    background: var(--cobalt-blue);
+    background: var(--dark-gray); /* Updated to Dark Gray */
     color: var(--white);
 }
 
