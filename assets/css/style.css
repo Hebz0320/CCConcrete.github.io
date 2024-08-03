@@ -433,7 +433,7 @@ input[type='radio'] {
     transform: rotate(135deg);
 }
 
-/* Team Section  */
+/* Team Section */
 
 .team .card {
     margin-top: 50px;
@@ -658,5 +658,12 @@ input[type='radio'] {
     }
     .footer {
         text-align: center;
+    }
+    .footer img {
+        height: 150px; /* Adjusted size for smaller screens */
+        width: 150px;  /* Adjusted size for smaller screens */
+    }
+    .footer h4 {
+        font-size: 24px; /* Smaller font size for better readability on mobile */
     }
 }
