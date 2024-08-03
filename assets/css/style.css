@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: var(--white-20);
+    background: var(--white);
 }
 
 html {
@@ -18,39 +18,33 @@ html {
 }
 
 :root {
-    --blue: #004080; /* Classic Blue */
-    --dark-blue: #002e5d; /* Darker Classic Blue */
     --white: #ffffff;
-    --white-20: #f0f4f8; /* Very Light Gray */
+    --dark-gray: #333333; /* Dark Gray */
+    --gray: #7d7d7d; /* Classic Gray */
     --black: #000000;
-    --black-90: #333333;
-    --grey: #7d7d7d; /* Classic Gray */
-    --cobalt-blue: #0033cc; /* Cobalt Blue */
-    --bright-blue: #0066cc; /* Bright Classic Blue */
-    --light-blue: #cce0ff; /* Light Classic Blue */
 }
 
 h1 {
     font-size: 50px;
     text-transform: capitalize;
-    color: var(--dark-blue);
+    color: var(--black);
 }
 
 h3 {
     font-size: 25px;
     text-transform: uppercase;
     margin-top: 80px;
-    color: var(--grey);
+    color: var(--gray);
 }
 
 h4 {
     font-size: 30px;
-    color: var(--cobalt-blue);
+    color: var(--black);
 }
 
 p {
     font-size: 20px;
-    color: var(--grey);
+    color: var(--gray);
 }
 
 button {
@@ -59,14 +53,14 @@ button {
     text-align: center;
     background: transparent;
     text-transform: capitalize;
-    color: var(--cobalt-blue);
-    border: 1px solid var(--cobalt-blue);
+    color: var(--black);
+    border: 1px solid var(--black);
     cursor: pointer;
 }
 
 button:hover {
     color: var(--white);
-    background-color: var(--cobalt-blue);
+    background-color: var(--black);
     letter-spacing: 1px;
 }
 
@@ -92,12 +86,12 @@ button:hover {
 
 .navbar-toggler {
     border: none;
-    color: var(--cobalt-blue);
+    color: var(--black);
 }
 
 .navbar-toggler:hover {
     border: none;
-    background-color: var(--bright-blue);
+    background-color: var(--dark-gray);
     color: var(--white);
 }
 
@@ -108,7 +102,7 @@ button:hover {
 }
 
 .navbar-nav .nav-link:hover {
-    color: var(--cobalt-blue) !important;
+    color: var(--black) !important;
     text-decoration: none;
     letter-spacing: 2px;
 }
@@ -125,7 +119,7 @@ button:hover {
 }
 
 .button:hover {
-    background-color: var(--cobalt-blue);
+    background-color: var(--black);
     color: var(--white);
     text-decoration: none;
     border: none;
@@ -136,18 +130,19 @@ button:hover {
     font-size: 18px;
     margin-left: 500px;
     text-transform: uppercase;
-    color: var(--cobalt-blue);
-    border: 1px solid var(--cobalt-blue);
+    color: var(--black);
+    border: 1px solid var(--black);
 }
 
 /* Main Section  */
 
 .main h1 {
     margin-top: 100px;
+    color: var(--black);
 }
 
 .main p {
-    color: var(--grey);
+    color: var(--gray);
     margin-top: 100px;
     font-size: 20px;
 }
@@ -173,7 +168,7 @@ button:hover {
 }
 
 .carousel li.active {
-    background: var(--bright-blue);
+    background: var(--black);
 }
 
 /* Counter Section */
@@ -188,7 +183,7 @@ button:hover {
 }
 
 .counter h2 {
-    color: var(--cobalt-blue);
+    color: var(--black);
     font-weight: 700;
     font-size: 50px;
     margin: 0;
@@ -201,13 +196,13 @@ button:hover {
 .counter span {
     font-size: 50px;
     font-weight: 300;
-    color: var(--cobalt-blue);
+    color: var(--black);
     margin-right: 5px; /* Space between number and + */
 }
 
 .counter .heading {
     font-size: 30px;
-    color: var(--black-90);
+    color: var(--dark-gray);
     margin-top: 10px; /* Add space between number and text */
     text-transform: uppercase;
 }
@@ -217,7 +212,6 @@ button:hover {
     content: none; /* Remove the + symbol if it was added via CSS */
 }
 
-
 /* Work Section  */
 
 .work h3 {
@@ -226,6 +220,7 @@ button:hover {
 
 .work h1 {
     margin-top: 10px;
+    color: var(--black);
 }
 
 .work .card {
@@ -242,25 +237,25 @@ button:hover {
 
 .work .card i {
     font-size: 40px;
-    color: var(--cobalt-blue);
+    color: var(--black);
 }
 
 .work .card h4 {
     font-size: 35px;
     margin-top: 40px;
-    color: var(--cobalt-blue);
+    color: var(--black);
 }
 
 .work .card p {
     font-size: 18px;
     margin-top: 20px;
-    color: var(--grey);
+    color: var(--gray);
 }
 
 /* About Section  */
 
 .about p {
-    color: var(--grey);
+    color: var(--gray);
 }
 
 .about .about-img img {
@@ -280,7 +275,7 @@ button:hover {
 .about .about-text ul li {
     list-style: none;
     font-size: 20px;
-    color: var(--grey);
+    color: var(--gray);
 }
 
 /* Service Section  */
@@ -290,11 +285,12 @@ button:hover {
 }
 
 .services p {
-    color: var(--grey);
+    color: var(--gray);
 }
 
 .services h1 {
     margin-top: 10px;
+    color: var(--black);
 }
 
 .services .card {
@@ -310,18 +306,19 @@ button:hover {
 
 .services .card i {
     font-size: 50px;
-    color: var(--cobalt-blue);
+    color: var(--black);
 }
 
 .services .card p {
     font-size: 18px;
     margin-top: 20px;
+    color: var(--gray);
 }
 
 /* Project Section  */
 
 .project p {
-    color: var(--grey);
+    color: var(--gray);
 }
 
 .project p {
@@ -341,18 +338,19 @@ button:hover {
 
 .project .card h5 {
     font-size: 25px;
-    color: var(--grey);
+    color: var(--gray);
 }
 
 /* Choose Section  */
 
 .choose h1 {
     margin-top: 0;
+    color: var(--black);
 }
 
 .choose p {
     margin-top: 50px;
-    color: var(--grey);
+    color: var(--gray);
 }
 
 .choose img {
@@ -367,7 +365,7 @@ button:hover {
 }
 
 .choose .card i {
-    color: var(--cobalt-blue);
+    color: var(--black);
     font-size: 40px;
 }
 
@@ -379,25 +377,26 @@ button:hover {
 .choose .card h5 {
     font-size: 25px;
     margin-top: 40px;
-    color: var(--grey);
+    color: var(--gray);
 }
 
 /* FAQ Section */
 
 .faq h1 {
     margin-top: 0px;
+    color: var(--black);
 }
 
 .accordion {
     margin: 50px auto;
     width: 100%;
     max-width: 900px;
-    color: var(--white);
+    color: var(--black);
 }
 
 .accordion p {
     margin-top: 0;
-    color: var(--white);
+    color: var(--black);
 }
 
 .accordion li {
@@ -407,7 +406,7 @@ button:hover {
 }
 
 .accordion li label:hover {
-    color: var(--cobalt-blue);
+    color: var(--black);
     background-color: var(--white);
 }
 
@@ -416,147 +415,89 @@ button:hover {
     align-items: center;
     padding: 20px;
     font-size: 20px;
-    background: var(--cobalt-blue);
-    margin-bottom: 2px;
-    position: relative;
+    background: var(--dark-gray);
+    margin-bottom: 10px;
     cursor: pointer;
+    color: var(--white);
 }
 
-label::after {
-    content: "+";
-    font-size: 35px;
-    position: absolute;
-    right: 20px;
-    transition: transform 0.5s;
-}
-
-input[type='radio'] {
+.accordion li input {
     display: none;
 }
 
+.accordion li input:checked ~ .content {
+    display: block;
+}
+
 .accordion .content {
-    background: var(--cobalt-blue);
-    text-align: left;
-    padding: 0 20px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s, padding 0.5s;
-}
-
-.accordion input[type='radio']:checked+label+.content {
-    max-height: 600px;
-    padding: 30px 20px;
-}
-
-.accordion input[type='radio']:checked+label::after {
-    transform: rotate(135deg);
-}
-
-/* Team Section  */
-
-.team .card {
-    margin-top: 50px;
-    border: none;
-}
-
-.team .card:hover {
-    box-shadow: 5px 5px 10px rgba(98, 98, 102, 0.7);
-    transform: scale(1.1);
-    border: none;
-}
-
-.team .card h4 {
-    font-size: 25px;
-    margin-top: 40px;
-    color: var(--cobalt-blue);
-}
-
-.team .card p {
-    font-size: 18px;
-    color: var(--grey);
-    margin-top: 10px;
-}
-
-.team .card i {
-    color: var(--bright-blue);
-    cursor: pointer;
-}
-
-.team .card i:hover {
-    color: var(--cobalt-blue);
-}
-
-/* Subscription Section */
-
-.subscription {
-    background: var(--cobalt-blue);
-    padding: 100px;
-}
-
-.subscription h1,
-.subscription p {
-    color: var(--white);
-    margin-top: 10px;
-}
-
-.subscription input {
-    margin-top: 50px;
-    width: 30%;
-    height: 50px;
+    display: none;
     padding: 20px;
-    color: var(--dark-blue);
-}
-
-.subscription button {
-    color: var(--white);
-    background: transparent;
-    border: 1px solid var(--white);
-    height: 50px;
-    width: 100px;
-    margin-left: 10px;
-}
-
-.subscription button:hover {
     background: var(--white);
-    color: var(--cobalt-blue);
+    color: var(--black);
+}
+
+.accordion .content p {
+    font-size: 18px;
+    color: var(--black);
 }
 
 /* Contact Section */
 
-.contact p {
-    color: var(--grey);
-}
-
-.contact input {
-    height: 50px;
-    padding: 20px;
-    color: var(--dark-blue);
-    background: var(--white-20);
-    border: 1px solid var(--cobalt-blue);
-}
-
-.contact textarea {
-    border: none;
-    background: var(--white-20);
-    border: 1px solid var(--cobalt-blue);
-    color: var(--dark-blue);
-}
-
-.contact button {
-    margin-left: 220px;
-    margin-top: 20px;
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
 }
 
 .contact img {
-    height: 200px;
-    width: 200px;
-    margin-left: 100px;
+    height: 150px; /* Adjusted size */
+    width: 150px; /* Adjusted size */
+    margin-right: 20px;
     border-radius: 50%;
 }
 
 .contact p {
+    color: var(--gray);
     margin-top: 20px;
 }
+
+.contact form {
+    max-width: 500px; /* Limit the width for better readability */
+    margin: auto;
+}
+
+.contact input,
+.contact textarea {
+    height: 50px;
+    padding: 20px;
+    color: var(--black);
+    background: var(--white);
+    border: 1px solid var(--gray);
+    border-radius: 5px; /* Add some border-radius for a modern look */
+    margin-bottom: 20px;
+    width: 100%; /* Make input fields responsive */
+}
+
+.contact textarea {
+    height: 150px; /* Adjust height for text area */
+}
+
+.contact button {
+    padding: 10px 20px; /* Add padding for a better button size */
+    font-size: 18px;
+    color: var(--white);
+    background: var(--black);
+    border: none;
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background: var(--gray);
+}
+
 
 /* Footer Section */
 
