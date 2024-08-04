@@ -197,7 +197,7 @@ button:hover {
 }
 
 .counter span {
-    font-size: 3rem; /* Adjust as needed for consistency */
+    font-size: 2rem; /* Adjust font size to make the + sign appropriately sized */
     font-weight: 300;
     color: var(--black);
     margin-right: 0.2em; /* Space between number and + */
@@ -218,15 +218,13 @@ button:hover {
     }
 
     .counter span {
-        font-size: 2.5rem; /* Adjust font size for smaller screens */
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
     }
 
     .counter .heading {
         font-size: 1.5rem; /* Adjust font size for smaller screens */
     }
 }
-
-
 
 /* Work Section  */
 
