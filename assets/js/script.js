@@ -10,17 +10,20 @@ document.addEventListener("DOMContentLoaded", () => {
             timer = setInterval(() => {
                 current += increment;
                 obj.textContent = current;
-                if (current == end) {
+                if (current === end) {
                     clearInterval(timer);
+                    // Set a fixed height after the counting is done
+                    obj.parentElement.style.height = obj.parentElement.scrollHeight + 'px';
                 }
             }, step);
     }
+
     counter("count1", 0, 1287, 3000);
-    counter("count2", 100, 3219, 2500);
+    counter("count2", 100, 5786, 2500);
     counter("count3", 0, 1440, 3000);
     counter("count4", 0, 7110, 3000);
-
 });
+
 
 
 // Scroll 
