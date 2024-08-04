@@ -191,6 +191,12 @@ button:hover {
     margin: 0;
     padding: 0;
     line-height: 1.2; /* Adjust line height for better vertical alignment */
+    /* Fixed height to prevent jitter */
+    height: 120px; /* Adjust to fit the largest content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Prevent content overflow */
 }
 
 .counter span {
@@ -205,6 +211,16 @@ button:hover {
     color: var(--black-90);
     margin-top: 0.5em; /* Add space between number and text */
     text-transform: uppercase;
+}
+
+/* Ensure consistent height for the column */
+.counter .col-lg-2 {
+    min-height: 160px; /* Adjust as needed to prevent layout shifts */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px; /* Add padding to ensure content does not touch edges */
 }
 
 /* Responsive CSS for Counter Section */
@@ -222,6 +238,7 @@ button:hover {
         font-size: 1.5rem; /* Reduce font size for smaller screens */
     }
 }
+
 
 /* Work Section  */
 
