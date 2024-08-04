@@ -179,9 +179,10 @@ button:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 120px; /* Ensure enough space for larger numbers */
-    padding: 20px; /* Add padding to prevent text from touching edges */
-    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+    height: 120px; /* Or whatever is appropriate */
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .counter h2 {
