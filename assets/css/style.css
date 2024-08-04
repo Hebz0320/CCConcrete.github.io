@@ -209,7 +209,7 @@ button:hover {
 .counter .heading {
     font-size: 1.875rem; /* Use relative units for better responsiveness */
     color: var(--black-90);
-    margin-top: 0.5em; /* Add space between number and text */
+    margin-top: 0.3em; /* Adjust space between number and text */
     text-transform: uppercase;
 }
 
@@ -236,6 +236,7 @@ button:hover {
 
     .counter .heading {
         font-size: 1.5rem; /* Reduce font size for smaller screens */
+        margin-top: 0.2em; /* Adjust space between number and text for smaller screens */
     }
 }
 
