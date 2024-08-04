@@ -172,7 +172,6 @@ button:hover {
 }
 
 /* Counter Section */
-
 .counter {
     display: flex;
     flex-direction: column;
@@ -182,6 +181,7 @@ button:hover {
     min-height: 120px; /* Ensure enough space for larger numbers */
     padding: 20px; /* Add padding to prevent text from touching edges */
     box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+    margin: 0 auto; /* Center horizontally */
 }
 
 .counter h2 {
@@ -208,7 +208,6 @@ button:hover {
 }
 
 /* Responsive CSS for Counter Section */
-
 @media only screen and (max-width: 767px) {
     .counter h2 {
         font-size: 2.5rem; /* Reduce font size for smaller screens */
