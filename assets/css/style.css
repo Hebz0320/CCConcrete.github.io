@@ -171,7 +171,7 @@ button:hover {
     background: var(--black);
 }
 
- /* Counter Section */
+/* Counter Section */
 
 .counter {
     display: flex;
@@ -191,8 +191,6 @@ button:hover {
     margin: 0;
     padding: 0;
     line-height: 1.2; /* Adjust line height for better vertical alignment */
-    /* Fixed height to prevent jitter */
-    height: 120px; /* Adjust to fit the largest content */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -209,7 +207,7 @@ button:hover {
 .counter .heading {
     font-size: 1.875rem; /* Use relative units for better responsiveness */
     color: var(--black-90);
-    margin-top: 0.3em; /* Adjust space between number and text */
+    margin-top: 0.1em; /* Adjust space between number and text to be closer */
     text-transform: uppercase;
 }
 
@@ -236,10 +234,9 @@ button:hover {
 
     .counter .heading {
         font-size: 1.5rem; /* Reduce font size for smaller screens */
-        margin-top: 0.2em; /* Adjust space between number and text for smaller screens */
+        margin-top: 0.05em; /* Tighter spacing on smaller screens */
     }
 }
-
 
 /* Work Section  */
 
