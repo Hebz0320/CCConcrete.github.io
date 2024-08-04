@@ -172,6 +172,7 @@ button:hover {
 }
 
 /* Counter Section */
+
 .counter {
     display: flex;
     flex-direction: column;
@@ -181,54 +182,46 @@ button:hover {
     min-height: 120px; /* Ensure enough space for larger numbers */
     padding: 20px; /* Add padding to prevent text from touching edges */
     box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
-    margin: 0 auto; /* Center horizontally */
 }
 
 .counter h2 {
-    color: var(--black);
+    color: var(--cobalt-blue);
     font-weight: 700;
-    font-size: 160px; /* Fixed width for the number */
-    line-height: 57.59px; /* Fixed height */
+    font-size: 3rem; /* Use relative units for better responsiveness */
     margin: 0;
     padding: 0;
+    line-height: 1.2; /* Adjust line height for better vertical alignment */
 }
 
 .counter span {
-    font-size: 160px; /* Adjust the size for the number */
+    font-size: 3rem; /* Use relative units for better responsiveness */
     font-weight: 300;
-    color: var(--black);
+    color: var(--cobalt-blue);
     margin-right: 0.2em; /* Space between number and + */
-    line-height: 57.59px; /* Ensure the + aligns properly */
 }
 
-/* Specific adjustment for the + sign */
-.counter span::after {
-    content: '+';
-    font-size: 2rem; /* Set specific size for the + sign */
-    margin-left: 0.2em; /* Space between number and + */
-    vertical-align: baseline; /* Ensure alignment with the number */
+.counter .heading {
+    font-size: 1.875rem; /* Use relative units for better responsiveness */
+    color: var(--black-90);
+    margin-top: 0.5em; /* Add space between number and text */
+    text-transform: uppercase;
 }
 
 /* Responsive CSS for Counter Section */
+
 @media only screen and (max-width: 767px) {
     .counter h2 {
-        font-size: 2.5rem; /* Adjust font size for smaller screens */
-        line-height: 1.2; /* Adjust line height for smaller screens */
+        font-size: 2.5rem; /* Reduce font size for smaller screens */
     }
 
     .counter span {
-        font-size: 2.5rem; /* Adjust font size for smaller screens */
-    }
-
-    .counter span::after {
-        font-size: 1.5rem; /* Adjust size for the + sign on smaller screens */
+        font-size: 2.5rem; /* Reduce font size for smaller screens */
     }
 
     .counter .heading {
-        font-size: 1.5rem; /* Adjust font size for smaller screens */
+        font-size: 1.5rem; /* Reduce font size for smaller screens */
     }
 }
-
 
 /* Work Section  */
 
