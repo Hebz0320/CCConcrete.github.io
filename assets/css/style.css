@@ -197,17 +197,20 @@ button:hover {
 }
 
 .counter span {
-    font-size: 2rem; /* Adjust font size to make the + sign appropriately sized */
+    font-size: 160px; /* Adjust the size for the number */
     font-weight: 300;
     color: var(--black);
     margin-right: 0.2em; /* Space between number and + */
+    line-height: 57.59px; /* Ensure the + aligns properly */
 }
 
-.counter .heading {
-    font-size: 1.875rem; /* Adjust for responsiveness */
-    color: var(--dark-gray);
-    margin-top: 0.5em; /* Add space between number and text */
-    text-transform: uppercase;
+/* Target only the + sign to ensure correct sizing */
+.counter span::before {
+    content: '+';
+    display: inline-block;
+    font-size: 100px; /* Set specific size for the + sign */
+    line-height: 1; /* Ensure the height is appropriate */
+    margin-left: 0.2em; /* Space between number and + */
 }
 
 /* Responsive CSS for Counter Section */
@@ -219,6 +222,10 @@ button:hover {
 
     .counter span {
         font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+
+    .counter span::before {
+        font-size: 40px; /* Adjust size for the + sign on smaller screens */
     }
 
     .counter .heading {
