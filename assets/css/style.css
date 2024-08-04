@@ -172,6 +172,7 @@ button:hover {
 }
 
 /* Counter Section */
+
 .counter {
     display: flex;
     flex-direction: column;
@@ -181,57 +182,47 @@ button:hover {
     min-height: 120px; /* Ensure enough space for larger numbers */
     padding: 20px; /* Add padding to prevent text from touching edges */
     box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
-    margin: 0 auto; /* Center horizontally */
 }
 
 .counter h2 {
     color: var(--black);
     font-weight: 700;
-    font-size: 160px; /* Fixed width */
-    line-height: 57.59px; /* Fixed height */
+    font-size: 3rem; /* Use relative units for better responsiveness */
     margin: 0;
     padding: 0;
-    display: inline-flex;
-    align-items: center; /* Center content vertically within the fixed height */
-    justify-content: center; /* Center content horizontally */
+    line-height: 1.2; /* Adjust line height for better vertical alignment */
 }
 
 .counter span {
-    font-size: 160px; /* Adjust the size for the number */
+    font-size: 3rem; /* Use relative units for better responsiveness */
     font-weight: 300;
     color: var(--black);
     margin-right: 0.2em; /* Space between number and + */
-    line-height: 57.59px; /* Ensure the + aligns properly */
 }
 
-/* Target only the + sign to ensure correct sizing */
-.counter span::before {
-    content: '+';
-    display: inline-block;
-    font-size: 100px; /* Set specific size for the + sign */
-    line-height: 1; /* Ensure the height is appropriate */
-    margin-left: 0.2em; /* Space between number and + */
+.counter .heading {
+    font-size: 1.875rem; /* Use relative units for better responsiveness */
+    color: var(--dark-gray);
+    margin-top: 0.5em; /* Add space between number and text */
+    text-transform: uppercase;
 }
 
 /* Responsive CSS for Counter Section */
+
 @media only screen and (max-width: 767px) {
     .counter h2 {
-        font-size: 2.5rem; /* Adjust font size for smaller screens */
-        line-height: 1.2; /* Adjust line height for smaller screens */
+        font-size: 2.5rem; /* Reduce font size for smaller screens */
     }
 
     .counter span {
-        font-size: 1.5rem; /* Adjust font size for smaller screens */
-    }
-
-    .counter span::before {
-        font-size: 40px; /* Adjust size for the + sign on smaller screens */
+        font-size: 2.5rem; /* Reduce font size for smaller screens */
     }
 
     .counter .heading {
-        font-size: 1.5rem; /* Adjust font size for smaller screens */
+        font-size: 1.5rem; /* Reduce font size for smaller screens */
     }
 }
+
 
 /* Work Section  */
 
@@ -544,7 +535,7 @@ button:hover {
 }
 
 .footer .navbar-brand img {
-    width: 250px; /* Adjusted size for the logo */
+    width: 150px; /* Adjusted size for the logo */
     height: auto; /* Maintain aspect ratio */
 }
 
