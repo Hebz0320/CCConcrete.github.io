@@ -534,9 +534,9 @@ button:hover {
     text-align: center; /* Center text for small columns */
 }
 
-.footer .navbar-brand img {
-    width: 150px; /* Adjusted size for the logo */
-    height: auto; /* Maintain aspect ratio */
+.footer img {
+    height: 100px; /* Reduced size for smaller screens */
+    width: auto; /* Maintain aspect ratio */
 }
 
 .footer h4 {
@@ -580,9 +580,8 @@ button:hover {
         margin-bottom: 20px; /* Add spacing between columns on mobile */
     }
 
-    .footer .navbar-brand img {
-        width: 120px; /* Adjust size for smaller screens */
-        height: auto; /* Maintain aspect ratio */
+    .footer img {
+        height: 80px; /* Adjust size for smaller screens */
     }
 
     .footer h4 {
