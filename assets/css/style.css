@@ -171,18 +171,15 @@ button:hover {
     background: var(--black);
 }
 
-/* Counter Section */
-
 .counter {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 120px; /* Or whatever is appropriate */
-    padding: 20px;
-    box-sizing: border-box;
-    overflow: hidden;
+    min-height: 120px; /* Ensure enough space for larger numbers */
+    padding: 20px; /* Add padding to prevent text from touching edges */
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
 }
 
 .counter h2 {
