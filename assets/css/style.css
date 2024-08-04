@@ -481,7 +481,8 @@ button:hover {
     height: 150px; /* Adjusted size */
     width: 150px; /* Adjusted size */
     margin-right: 20px;
-    border-radius: 50%;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    /* Remove border-radius to keep the square shape */
 }
 
 .contact p {
