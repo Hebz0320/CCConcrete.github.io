@@ -171,6 +171,8 @@ button:hover {
     background: var(--black);
 }
 
+ /* Counter Section */
+
 .counter {
     display: flex;
     flex-direction: column;
