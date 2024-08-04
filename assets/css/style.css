@@ -187,21 +187,24 @@ button:hover {
 .counter h2 {
     color: var(--black);
     font-weight: 700;
-    font-size: 3rem; /* Use relative units for better responsiveness */
+    font-size: 160px; /* Fixed width */
+    line-height: 57.59px; /* Fixed height */
     margin: 0;
     padding: 0;
-    line-height: 1.2; /* Adjust line height for better vertical alignment */
+    display: inline-flex;
+    align-items: center; /* Center content vertically within the fixed height */
+    justify-content: center; /* Center content horizontally */
 }
 
 .counter span {
-    font-size: 3rem; /* Use relative units for better responsiveness */
+    font-size: 3rem; /* Adjust as needed for consistency */
     font-weight: 300;
     color: var(--black);
     margin-right: 0.2em; /* Space between number and + */
 }
 
 .counter .heading {
-    font-size: 1.875rem; /* Use relative units for better responsiveness */
+    font-size: 1.875rem; /* Adjust for responsiveness */
     color: var(--dark-gray);
     margin-top: 0.5em; /* Add space between number and text */
     text-transform: uppercase;
@@ -210,17 +213,19 @@ button:hover {
 /* Responsive CSS for Counter Section */
 @media only screen and (max-width: 767px) {
     .counter h2 {
-        font-size: 2.5rem; /* Reduce font size for smaller screens */
+        font-size: 2.5rem; /* Adjust font size for smaller screens */
+        line-height: 1.2; /* Adjust line height for smaller screens */
     }
 
     .counter span {
-        font-size: 2.5rem; /* Reduce font size for smaller screens */
+        font-size: 2.5rem; /* Adjust font size for smaller screens */
     }
 
     .counter .heading {
-        font-size: 1.5rem; /* Reduce font size for smaller screens */
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
     }
 }
+
 
 
 /* Work Section  */
