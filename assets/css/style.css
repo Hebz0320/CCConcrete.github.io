@@ -539,7 +539,7 @@ button:hover {
 }
 
 .footer .navbar-brand img {
-    width: 150px; /* Adjusted size for the logo */
+    width: 250px; /* Adjusted size for the logo */
     height: auto; /* Maintain aspect ratio */
 }
 
