@@ -189,9 +189,9 @@ button:hover {
 
 .carousel-item img {
     width: 100%;
-    height: auto;
+    height: 100%; /* Ensure images cover the height */
     max-height: 500px; /* Ensure images do not exceed the maximum height */
-    object-fit: cover;
+    object-fit: contain; /* Ensures the image fits within the container without cropping */
 }
 
 .carousel-control-prev,
@@ -249,6 +249,7 @@ button:hover {
 .carousel-indicators .active {
     background-color: #000;
 }
+
 /* Counter Section */
 
 .counter {
