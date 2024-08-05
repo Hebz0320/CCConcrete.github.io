@@ -79,8 +79,18 @@ button:hover {
 /* Navbar Section */
 
 .navbar {
+    height: 100px;
     background: var(--white);
     box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    position: relative; /* Ensure proper positioning of absolute elements */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
 }
 
 .navbar-toggler {
@@ -94,13 +104,20 @@ button:hover {
     color: var(--white);
 }
 
-.navbar-nav {
+.navbar-collapse {
     display: flex;
     flex-grow: 1;
+    justify-content: center; /* Center navigation links */
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Allow nav items to grow and center them */
 }
 
 .navbar-nav .nav-item {
-    margin-left: 20px; /* Adjust spacing between nav items */
+    margin-left: 15px; /* Adjust margin between nav items */
 }
 
 .navbar-nav .nav-link {
@@ -112,6 +129,12 @@ button:hover {
     color: var(--black) !important;
     text-decoration: none;
     letter-spacing: 2px;
+}
+
+.navbar-nav a {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
 }
 
 .navbar-light .navbar-brand img {
@@ -130,13 +153,10 @@ button:hover {
     text-align: center; /* Center text inside button */
 }
 
-.button:hover {
-    background-color: var(--black);
-    color: var(--white);
-    text-decoration: none;
-    border: none;
+/* Ensure the button is aligned to the right */
+.navbar .contact-button {
+    margin-left: auto; /* Pushes the button to the right */
 }
-
 
 /* Main Section  */
 
