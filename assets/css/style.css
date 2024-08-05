@@ -168,16 +168,19 @@ button:hover {
     display: flex;
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
-    overflow: hidden; /* Hide any overflow */
     max-height: 100vh; /* Full viewport height */
+    min-height: 300px; /* Minimum height for smaller screens */
 }
 
 .carousel-item img {
-    max-height: 100%; /* Allow the image to scale with height */
-    max-width: 100%; /* Ensure image doesn't exceed carousel width */
-    object-fit: contain; /* Scale image to fit without cropping */
+    max-height: 100%; /* Scale image to fit within the height */
+    max-width: 100%; /* Scale image to fit within the width */
+    height: auto; /* Maintain aspect ratio */
+    width: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Scale the image to fit without cropping */
 }
 
+/* Carousel Indicators */
 .carousel-indicators li {
     background: var(--white); /* Indicator color */
     height: 10px;
@@ -190,7 +193,7 @@ button:hover {
     background: var(--black); /* Active indicator color */
 }
 
-/* Optional: Adjust carousel controls if needed */
+/* Carousel Controls */
 .carousel-control-prev, 
 .carousel-control-next {
     width: 5%;
@@ -201,6 +204,7 @@ button:hover {
     background-color: var(--black); /* Control icon color */
     border-radius: 50%; /* Rounded control icons */
 }
+
 /* Counter Section */
 
 .counter {
