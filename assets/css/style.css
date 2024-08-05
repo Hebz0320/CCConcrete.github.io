@@ -166,17 +166,29 @@ button:hover {
     justify-content: center; /* Center images horizontally */
     max-height: 100vh; /* Ensure the carousel does not exceed viewport height */
     overflow: hidden; /* Hide any overflow to avoid scrollbars */
+    position: relative; /* Ensure proper positioning of child elements */
 }
 
 .carousel-item img {
     max-height: 100vh; /* Ensure images do not exceed viewport height */
-    max-width: 100%; /* Ensure images do not exceed container width */
+    max-width: 100vw; /* Ensure images do not exceed viewport width */
     height: auto; /* Maintain aspect ratio */
     width: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Ensure images fit within the container without cropping */
+    object-fit: contain; /* Ensure images fit within the container while maintaining aspect ratio */
+    position: absolute; /* Allow proper centering */
+    top: 50%; /* Center image vertically */
+    left: 50%; /* Center image horizontally */
+    transform: translate(-50%, -50%); /* Correctly position the image */
 }
 
-.carousel li {
+.carousel-indicators {
+    position: absolute; /* Ensure indicators are positioned on top of the carousel */
+    bottom: 10px; /* Space from the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+}
+
+.carousel-indicators li {
     background: var(--white);
     height: 10px;
     width: 10px;
@@ -184,10 +196,9 @@ button:hover {
     cursor: pointer;
 }
 
-.carousel li.active {
+.carousel-indicators li.active {
     background: var(--black);
 }
-
 
 /* Counter Section */
 
