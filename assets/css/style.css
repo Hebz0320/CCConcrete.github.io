@@ -170,6 +170,7 @@ button:hover {
     position: relative;
     width: 100%;
     overflow: hidden;
+    max-height: 500px; /* Set the maximum height for the carousel */
 }
 
 .carousel-item {
@@ -189,6 +190,7 @@ button:hover {
 .carousel-item img {
     width: 100%;
     height: auto;
+    max-height: 500px; /* Ensure images do not exceed the maximum height */
     object-fit: cover;
 }
 
@@ -247,7 +249,6 @@ button:hover {
 .carousel-indicators .active {
     background-color: #000;
 }
-
 /* Counter Section */
 
 .counter {
