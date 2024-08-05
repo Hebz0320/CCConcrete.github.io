@@ -161,17 +161,25 @@ button:hover {
 /* Carousel Section */
 
 .carousel-item {
-    max-height: 100vh; /* Ensure the item fits the viewport height */
-    display: flex; /* Center the content */
-    justify-content: center; /* Horizontally center content */
-    align-items: center; /* Vertically center content */
+    max-height: 100vh;
+    min-height: 300px;
 }
 
-.carousel-item img,
-.carousel-item video {
-    max-width: 90%; /* Limit maximum width to prevent overflow */
-    max-height: 80vh; /* Limit maximum height to fit within viewport */
-    height: auto; /* Maintain aspect ratio */
+.carousel-item img {
+    max-height: 600px;
+    width: 100%;
+}
+
+.carousel li {
+    background: var(--white);
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.carousel li.active {
+    background: var(--black);
 }
 
 /* Carousel Indicators */
