@@ -76,33 +76,44 @@ button:hover {
     opacity: 1;
 }
 
-/* Navbar Section  */
+/* Navbar Section */
 
 .navbar {
     height: 100px;
-    background: var(--white); /* Background color */
+    background: var(--white);
     box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.2);
 }
 
 .navbar-toggler {
     border: none;
-    color: var(--black); /* Text color */
+    color: var(--black);
 }
 
 .navbar-toggler:hover {
     border: none;
-    background-color: var(--dark-gray); /* Background color on hover */
-    color: var(--white); /* Text color on hover */
+    background-color: var(--dark-gray);
+    color: var(--white);
+}
+
+.navbar-collapse {
+    display: flex;
+    justify-content: space-between; /* Ensures space between centered items and the right-aligned button */
+}
+
+.navbar-nav {
+    display: flex;
+    flex-grow: 1; /* Allows the nav to take up available space */
+    justify-content: center; /* Center the items */
 }
 
 .navbar-nav .nav-link {
     font-size: 18px;
-    margin-right: 20px;
-    color: var(--black) !important; /* Text color */
+    margin: 0 15px; /* Adjust margin for spacing between links */
+    color: var(--black) !important;
 }
 
 .navbar-nav .nav-link:hover {
-    color: var(--black) !important; /* Text color on hover */
+    color: var(--black) !important;
     text-decoration: none;
     letter-spacing: 2px;
 }
@@ -121,18 +132,22 @@ button:hover {
 .button {
     padding: 10px;
     font-size: 18px;
-    margin-left: 0; /* Remove extra margin */
     text-transform: uppercase;
-    color: var(--black); /* Text color */
-    border: 1px solid var(--black); /* Border color */
-    background-color: var(--white); /* Background color */
+    color: var(--black);
+    border: 1px solid var(--black);
+    background-color: var(--white);
+    margin-left: 0; /* Removed the large margin */
 }
 
 .button:hover {
-    background-color: var(--black); /* Background color on hover */
-    color: var(--white); /* Text color on hover */
+    background-color: var(--black);
+    color: var(--white);
     text-decoration: none;
     border: none;
+}
+
+.navbar-nav .contact-button {
+    margin-left: auto; /* Aligns the Contact button to the far right */
 }
 
 /* Media query to ensure responsiveness */
