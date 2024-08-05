@@ -175,7 +175,21 @@ button:hover {
     width: auto; /* Maintain aspect ratio */
 }
 
-/* Carousel indicators */
+/* Carousel Section */
+
+.carousel-item {
+    max-height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+.carousel-item img {
+    max-height: 100%; /* Allow the image to scale with height */
+    max-width: 100%; /* Ensure image doesn't exceed carousel width */
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+}
+
 .carousel li {
     background: var(--white);
     height: 10px;
@@ -186,14 +200,6 @@ button:hover {
 
 .carousel li.active {
     background: var(--black);
-}
-
-/* Responsive adjustments */
-@media (max-width: 767px) {
-    .carousel-item img {
-        max-height: 300px; /* Adjust height for mobile devices */
-        width: auto; /* Maintain aspect ratio on smaller screens */
-    }
 }
 
 /* Counter Section */
