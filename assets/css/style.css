@@ -83,7 +83,6 @@ button:hover {
     background: var(--white);
     box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.2);
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
@@ -100,8 +99,8 @@ button:hover {
 
 .navbar-nav {
     display: flex;
-    justify-content: center;
     flex-grow: 1; /* Allows the nav to take up available space */
+    justify-content: center; /* Center nav items */
 }
 
 .navbar-nav .nav-link {
@@ -134,7 +133,7 @@ button:hover {
     color: var(--black);
     border: 1px solid var(--black);
     background-color: var(--white); /* Adjusted for consistency */
-    margin-left: 0; /* Removed the large margin */
+    margin: 0; /* Removed the margin to ensure proper alignment */
     display: inline-block; /* Ensure the button doesn't take extra space */
 }
 
@@ -145,9 +144,16 @@ button:hover {
     border: none;
 }
 
-/* Align the contact button to the right */
+/* Ensure the Contact button is aligned correctly */
 .navbar-nav .button {
-    margin-left: auto; /* Pushes the button to the far right within the nav items */
+    margin-left: 0; /* Ensure no extra margin */
+}
+
+/* Media query to ensure responsiveness */
+@media (max-width: 767px) {
+    .navbar-nav {
+        justify-content: flex-start; /* Adjust for mobile view */
+    }
 }
 
 /* Main Section  */
