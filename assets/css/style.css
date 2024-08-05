@@ -174,10 +174,8 @@ button:hover {
     align-items: center;
     justify-content: center;
     height: 100vh; /* Full viewport height */
-    position: absolute; /* Position items absolutely within the inner container */
-    top: 0;
-    left: 0;
-    width: 100%;
+    position: relative; /* Position items relatively within the inner container */
+    width: 100%; /* Ensure items cover the full width of the carousel */
     transition: opacity 0.6s ease-in-out; /* Smooth transition for opacity */
     opacity: 0; /* Hide non-active items */
 }
@@ -188,8 +186,9 @@ button:hover {
 
 .carousel-item img {
     max-width: 100%; /* Ensure images don’t exceed container width */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Cover the container without distortion */
+    max-height: 100%; /* Ensure images don’t exceed container height */
+    object-fit: contain; /* Contain the image without distortion */
+    object-position: center; /* Center the image within its container */
 }
 
 .carousel-indicators {
