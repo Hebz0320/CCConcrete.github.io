@@ -162,12 +162,14 @@ button:hover {
 
 .carousel {
     position: relative;
+    width: 100%; /* Ensure carousel takes full width of the parent container */
+    overflow: hidden; /* Hide overflow content */
 }
 
 .carousel-inner {
     position: relative;
-    overflow: hidden;
-    height: 100vh; /* Adjust as needed */
+    overflow: hidden; /* Hide overflow content */
+    height: 100vh; /* Full viewport height */
 }
 
 .carousel-item {
@@ -175,24 +177,44 @@ button:hover {
     align-items: center;
     justify-content: center;
     height: 100%; /* Full height of the carousel-inner */
+    width: 100%; /* Full width of the carousel-inner */
 }
 
 .carousel-item img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Cover the container without distortion */
 }
 
 .carousel-control-prev,
 .carousel-control-next {
-    width: 5%; /* Adjust width as needed */
+    width: 5%; /* Adjust control width as needed */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for controls */
 }
 
 .carousel-indicators {
     position: absolute;
-    bottom: 10px;
+    bottom: 10px; /* Space from the bottom of the carousel */
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); /* Center indicators */
+    z-index: 10; /* Ensure indicators are on top */
+}
+
+.carousel-indicators li {
+    background: var(--white); /* Indicator color */
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 5px; /* Space between indicators */
+}
+
+.carousel-indicators li.active {
+    background: var(--black); /* Active indicator color */
 }
 
 /* Counter Section */
