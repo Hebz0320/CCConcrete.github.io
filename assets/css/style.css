@@ -161,15 +161,21 @@ button:hover {
 /* Carousel Section */
 
 .carousel-item {
-    max-height: 100vh;
-    min-height: 300px;
+    display: flex;
+    align-items: center; /* Center images vertically */
+    justify-content: center; /* Center images horizontally */
+    max-height: 100vh; /* Ensure the carousel does not exceed viewport height */
+    overflow: hidden; /* Hide any overflow to avoid scrollbars */
 }
 
 .carousel-item img {
-    max-height: 600px;
-    width: 100%;
+    max-height: 100vh; /* Ensure images do not exceed viewport height */
+    max-width: 100%; /* Ensure images do not exceed container width */
+    height: auto; /* Maintain aspect ratio */
+    width: auto; /* Maintain aspect ratio */
 }
 
+/* Carousel indicators */
 .carousel li {
     background: var(--white);
     height: 10px;
@@ -182,19 +188,13 @@ button:hover {
     background: var(--black);
 }
 
-/* Carousel Indicators */
-.carousel-indicators li {
-    background: var(--white);
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    cursor: pointer;
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .carousel-item img {
+        max-height: 300px; /* Adjust height for mobile devices */
+        width: auto; /* Maintain aspect ratio on smaller screens */
+    }
 }
-
-.carousel-indicators li.active {
-    background: var(--black);
-}
-
 
 /* Counter Section */
 
