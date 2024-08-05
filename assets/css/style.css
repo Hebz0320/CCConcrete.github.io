@@ -83,9 +83,14 @@ button:hover {
     background: var(--white);
     box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.2);
     display: flex;
-    justify-content: space-between; /* Space between brand and items */
     align-items: center;
-    padding: 0 20px; /* Optional: Adjust padding */
+    padding: 0 20px;
+    position: relative; /* To position the contact button correctly */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
 }
 
 .navbar-toggler {
@@ -101,8 +106,9 @@ button:hover {
 
 .navbar-nav {
     display: flex;
-    flex-grow: 1; /* Allows the nav to take up available space */
-    justify-content: center; /* Center align nav items */
+    flex-grow: 1;
+    justify-content: center;
+    margin: 0;
 }
 
 .navbar-nav .nav-link {
@@ -134,7 +140,7 @@ button:hover {
     text-transform: uppercase;
     color: var(--black);
     border: 1px solid var(--black);
-    background-color: var(--white); /* Adjusted for consistency */
+    background-color: var(--white);
     display: inline-block; /* Ensure the button doesn't take extra space */
 }
 
@@ -146,8 +152,11 @@ button:hover {
 }
 
 /* Align the contact button to the right */
-.navbar-nav .contact-button {
-    margin-left: auto; /* Pushes the button to the right */
+.navbar .contact-button {
+    position: absolute; /* Position it absolutely within the navbar */
+    right: 20px; /* Adjust this value to position it as needed */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust vertical centering */
 }
 
 /* Main Section  */
