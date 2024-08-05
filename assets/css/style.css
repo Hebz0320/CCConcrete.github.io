@@ -161,28 +161,20 @@ button:hover {
 /* Carousel Section */
 
 .carousel-item {
-    max-height: 100vh; /* Ensure the carousel does not exceed the viewport height */
-    min-height: 300px; /* Minimum height for smaller screens */
-    position: relative; /* Ensure proper positioning for absolute elements inside */
-    display: flex; /* Center content inside carousel items */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
+    max-height: 100vh; /* Ensure the item fits the viewport height */
+    display: flex; /* Center the content */
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
 }
 
 .carousel-item img,
 .carousel-item video {
-    max-height: 100%; /* Ensure media fits within the carousel item */
-    max-width: 100%; /* Ensure media fits within the carousel item */
-    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    max-width: 90%; /* Limit maximum width to prevent overflow */
+    max-height: 80vh; /* Limit maximum height to fit within viewport */
+    height: auto; /* Maintain aspect ratio */
 }
 
-/* Optional: Styling for the carousel controls (if needed) */
-.carousel-control-prev,
-.carousel-control-next {
-    filter: invert(1); /* Optional: change arrow colors for better visibility */
-}
-
-/* Indicators styling */
+/* Carousel Indicators */
 .carousel-indicators li {
     background: var(--white);
     height: 10px;
@@ -194,6 +186,7 @@ button:hover {
 .carousel-indicators li.active {
     background: var(--black);
 }
+
 
 /* Counter Section */
 
