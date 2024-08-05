@@ -161,16 +161,29 @@ button:hover {
 /* Carousel Section */
 
 .carousel-item {
-    max-height: 100vh;
-    min-height: 300px;
+    max-height: 100vh; /* Ensure the carousel does not exceed the viewport height */
+    min-height: 300px; /* Minimum height for smaller screens */
+    position: relative; /* Ensure proper positioning for absolute elements inside */
+    display: flex; /* Center content inside carousel items */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
 }
 
-.carousel-item img {
-    max-height: 600px;
-    width: 100%;
+.carousel-item img,
+.carousel-item video {
+    max-height: 100%; /* Ensure media fits within the carousel item */
+    max-width: 100%; /* Ensure media fits within the carousel item */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
 }
 
-.carousel li {
+/* Optional: Styling for the carousel controls (if needed) */
+.carousel-control-prev,
+.carousel-control-next {
+    filter: invert(1); /* Optional: change arrow colors for better visibility */
+}
+
+/* Indicators styling */
+.carousel-indicators li {
     background: var(--white);
     height: 10px;
     width: 10px;
@@ -178,7 +191,7 @@ button:hover {
     cursor: pointer;
 }
 
-.carousel li.active {
+.carousel-indicators li.active {
     background: var(--black);
 }
 
