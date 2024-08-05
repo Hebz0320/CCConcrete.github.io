@@ -550,7 +550,7 @@ button:hover {
 }
 
 .footer img {
-    height: 120px; /* Reduced size for smaller screens */
+    height: 140px; /* Reduced size for smaller screens */
     width: auto; /* Maintain aspect ratio */
 }
 
