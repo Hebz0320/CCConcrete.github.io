@@ -123,7 +123,7 @@ button:hover {
 }
 
 .navbar-light .navbar-brand img {
-    height: 80px; /* Adjusted for better scaling */
+    height: 145px; /* Adjusted for better scaling */
     width: auto; /* Maintain aspect ratio */
 }
 
