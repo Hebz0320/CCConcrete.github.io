@@ -163,11 +163,16 @@ button:hover {
 .carousel-item {
     max-height: 100vh;
     min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .carousel-item img {
-    max-height: 600px;
-    width: 100%;
+    max-height: 100%; /* Adjust to fit the container height */
+    max-width: 100%; /* Adjust to fit the container width */
+    object-fit: cover; /* Ensure the image covers the container while maintaining its aspect ratio */
+    display: block; /* Remove any extra space below the image */
 }
 
 .carousel li {
@@ -181,7 +186,6 @@ button:hover {
 .carousel li.active {
     background: var(--black);
 }
-
 
 /* Counter Section */
 
