@@ -187,6 +187,8 @@ button:hover {
 .carousel-item img {
     max-width: 100%; /* Ensure images don’t exceed container width */
     max-height: 100%; /* Ensure images don’t exceed container height */
+    width: auto; /* Maintain aspect ratio and fit container */
+    height: auto; /* Maintain aspect ratio and fit container */
     object-fit: contain; /* Contain the image without distortion */
     object-position: center; /* Center the image within its container */
 }
