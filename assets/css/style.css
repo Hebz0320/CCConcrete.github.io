@@ -162,8 +162,7 @@ button:hover {
 
 .carousel {
     position: relative;
-    width: 100%; /* Ensure carousel takes full width of the parent container */
-    overflow: hidden; /* Hide overflow content */
+    width: 100%; /* Full width of the parent container */
 }
 
 .carousel-inner {
@@ -216,6 +215,7 @@ button:hover {
 .carousel-indicators li.active {
     background: var(--black); /* Active indicator color */
 }
+
 
 /* Counter Section */
 
