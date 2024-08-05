@@ -161,66 +161,38 @@ button:hover {
 /* Carousel Section */
 
 .carousel {
-    position: relative; /* Ensure the carousel is positioned properly */
+    position: relative;
 }
 
 .carousel-inner {
-    position: relative; /* Ensure the inner container is positioned properly */
-    overflow: hidden; /* Hide any overflow to prevent items from showing outside */
-    height: 100vh; /* Full viewport height */
+    position: relative;
+    overflow: hidden;
+    height: 100vh; /* Adjust as needed */
 }
 
 .carousel-item {
-    display: flex; /* Center images */
+    display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Full viewport height */
-    position: relative; /* Position items relatively within the inner container */
-    width: 100%; /* Ensure items cover the full width of the carousel */
-    transition: opacity 0.6s ease-in-out; /* Smooth transition for opacity */
-    opacity: 0; /* Hide non-active items */
-}
-
-.carousel-item.active {
-    opacity: 1; /* Show active item */
+    height: 100%; /* Full height of the carousel-inner */
 }
 
 .carousel-item img {
-    max-width: 100%; /* Ensure images don’t exceed container width */
-    max-height: 100%; /* Ensure images don’t exceed container height */
-    object-fit: contain; /* Contain the image without distortion */
-    object-position: center; /* Center the image within its container */
-}
-
-.carousel-indicators {
-    position: absolute; /* Position indicators within the carousel */
-    bottom: 10px; /* Adjust as needed */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10; /* Ensure indicators are on top */
-}
-
-.carousel-indicators li {
-    background: var(--white);
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    margin: 0 5px; /* Add space between indicators */
-}
-
-.carousel-indicators li.active {
-    background: var(--black);
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
 }
 
 .carousel-control-prev,
 .carousel-control-next {
-    width: 5%; /* Adjust control width as needed */
+    width: 5%; /* Adjust width as needed */
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for controls */
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* Counter Section */
