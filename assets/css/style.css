@@ -129,12 +129,11 @@ button:hover {
 .button {
     padding: 10px;
     font-size: 18px;
+    margin-left: 500px;
     text-transform: uppercase;
     color: var(--black);
     border: 1px solid var(--black);
     background-color: var(--white); /* Adjusted for consistency */
-    margin: 0; /* Removed the margin to ensure proper alignment */
-    display: inline-block; /* Ensure the button doesn't take extra space */
 }
 
 .button:hover {
