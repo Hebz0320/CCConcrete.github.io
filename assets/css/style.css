@@ -173,21 +173,7 @@ button:hover {
     max-width: 100%; /* Ensure images do not exceed container width */
     height: auto; /* Maintain aspect ratio */
     width: auto; /* Maintain aspect ratio */
-}
-
-/* Carousel Section */
-
-.carousel-item {
-    max-height: 100vh; /* Full viewport height */
-    display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-}
-
-.carousel-item img {
-    max-height: 100%; /* Allow the image to scale with height */
-    max-width: 100%; /* Ensure image doesn't exceed carousel width */
-    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+    object-fit: contain; /* Ensure images fit within the container without cropping */
 }
 
 .carousel li {
@@ -201,6 +187,7 @@ button:hover {
 .carousel li.active {
     background: var(--black);
 }
+
 
 /* Counter Section */
 
