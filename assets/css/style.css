@@ -96,9 +96,7 @@ button:hover {
 }
 
 .navbar-nav .nav-link {
-    font-size: 18px;
-    margin-right: 20px;
-    color: var(--black) !important; /* Text color */
+  padding: 0.5rem 1rem; /* Adjust padding as needed */
 }
 
 .navbar-nav .nav-link:hover {
@@ -119,22 +117,23 @@ button:hover {
 }
 
 .button {
-    padding: 10px;
-    font-size: 18px;
-    margin-left: 0; /* Remove extra margin */
-    text-transform: uppercase;
-    color: var(--black); /* Text color */
-    border: 1px solid var(--black); /* Border color */
-    background-color: var(--white); /* Background color */
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  color: #fff; /* Assuming you want white text */
+  background-color: #000; /* Black background for the button */
+  border-radius: 0.25rem; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s;
 }
 
 .button:hover {
-    background-color: var(--black); /* Background color on hover */
-    color: var(--white); /* Text color on hover */
-    text-decoration: none;
-    border: none;
+  background-color: #333; /* Slightly lighter on hover */
 }
 
+.navbar-nav .button {
+  margin-left: 1rem; /* Adjust spacing from other links */
+}
 /* Media query to ensure responsiveness */
 @media (max-width: 767px) {
     .navbar-nav {
