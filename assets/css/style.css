@@ -159,51 +159,29 @@ button:hover {
 }
 
 /* Carousel Section */
-.carousel {
-    position: relative;
-    overflow: hidden;
-}
 
 .carousel-item {
-    display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    max-height: 100vh; /* Full viewport height */
-    min-height: 300px; /* Minimum height for smaller screens */
+    max-height: 100vh;
+    min-height: 300px;
 }
 
 .carousel-item img {
-    max-height: 100%; /* Scale image to fit within the height */
-    max-width: 100%; /* Scale image to fit within the width */
-    height: auto; /* Maintain aspect ratio */
-    width: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Scale the image to fit without cropping */
+    max-height: 600px;
+    width: 100%;
 }
 
-/* Carousel Indicators */
-.carousel-indicators li {
-    background: var(--white); /* Indicator color */
+.carousel li {
+    background: var(--white);
     height: 10px;
     width: 10px;
     border-radius: 50%;
     cursor: pointer;
 }
 
-.carousel-indicators .active {
-    background: var(--black); /* Active indicator color */
+.carousel li.active {
+    background: var(--black);
 }
 
-/* Carousel Controls */
-.carousel-control-prev, 
-.carousel-control-next {
-    width: 5%;
-}
-
-.carousel-control-prev-icon, 
-.carousel-control-next-icon {
-    background-color: var(--black); /* Control icon color */
-    border-radius: 50%; /* Rounded control icons */
-}
 
 /* Counter Section */
 
