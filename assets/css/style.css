@@ -145,8 +145,8 @@ button:hover {
     border: none;
 }
 
-/* Ensure the button is aligned to the right */
-.navbar .contact-button {
+/* Align the contact button to the right */
+.navbar-nav .contact-button {
     margin-left: auto; /* Pushes the button to the right */
 }
 
