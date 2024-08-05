@@ -76,12 +76,15 @@ button:hover {
     opacity: 1;
 }
 
-/* Navbar Section  */
+/* Navbar Section */
 
 .navbar {
     height: 100px;
     background: var(--white);
     box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .navbar-toggler {
@@ -95,9 +98,15 @@ button:hover {
     color: var(--white);
 }
 
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1; /* Allows the nav to take up available space */
+}
+
 .navbar-nav .nav-link {
     font-size: 18px;
-    margin-right: 20px;
+    margin: 0 15px; /* Adjust margin for spacing between links */
     color: var(--black) !important;
 }
 
@@ -114,8 +123,19 @@ button:hover {
 }
 
 .navbar-light .navbar-brand img {
-    height: 150px;
-    width: 150px;
+    height: 80px; /* Adjusted for better scaling */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.button {
+    padding: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: var(--black);
+    border: 1px solid var(--black);
+    background-color: var(--white); /* Adjusted for consistency */
+    margin-left: 0; /* Removed the large margin */
+    display: inline-block; /* Ensure the button doesn't take extra space */
 }
 
 .button:hover {
@@ -123,15 +143,6 @@ button:hover {
     color: var(--white);
     text-decoration: none;
     border: none;
-}
-
-.button {
-    padding: 10px;
-    font-size: 18px;
-    margin-left: 500px;
-    text-transform: uppercase;
-    color: var(--black);
-    border: 1px solid var(--black);
 }
 
 /* Main Section  */
