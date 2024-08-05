@@ -161,18 +161,20 @@ button:hover {
 /* Carousel Section */
 
 .carousel-item {
-    max-height: 100vh; /* Full viewport height */
-    min-height: 300px; /* Minimum height */
-    display: flex; /* Use flexbox for centering */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    overflow: hidden; /* Hide overflow to prevent images from spilling out */
+    display: flex; /* Center images */
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+}
+
+.carousel-inner {
+    height: 100%; /* Ensure the inner container takes full height */
 }
 
 .carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures images cover the container without distortion */
+    max-width: 100%; /* Ensure images don’t exceed container width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the container without distortion */
 }
 
 .carousel li {
