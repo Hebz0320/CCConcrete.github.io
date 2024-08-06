@@ -94,6 +94,12 @@ button:hover {
     justify-content: center; /* Center links horizontally */
 }
 
+/*logo image */
+.navbar-light .navbar-brand img {
+    height: 150px;
+    width: 150px;
+}
+
 /* Navbar links styling */
 .navbar-nav .nav-link {
     margin-right: 20px; /* Space between links */
