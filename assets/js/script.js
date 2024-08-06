@@ -52,6 +52,36 @@ document.querySelectorAll('.navbar-nav .nav-link, .contact-button').forEach(elem
     });
 });
 
+// Lightbox functionality
+document.addEventListener("DOMContentLoaded", () => {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.lightbox .close');
+    const caption = document.getElementById('caption');
+
+    // Open lightbox
+    document.querySelectorAll('.carousel-item img').forEach(img => {
+        img.addEventListener('click', () => {
+            lightbox.style.display = 'block';
+            lightboxImg.src = img.src;
+            caption.textContent = img.alt;
+        });
+    });
+
+    // Close lightbox
+    closeBtn.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+    });
+
+    // Close lightbox when clicking outside of image
+    lightbox.addEventListener('click', (event) => {
+        if (event.target === lightbox) {
+            lightbox.style.display = 'none';
+        }
+    });
+});
+
+
 
 
 
