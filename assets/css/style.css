@@ -90,21 +90,21 @@ button:hover {
 /* Navbar links container */
 .navbar-collapse {
     display: flex;
-    flex-direction: column; /* Stack items vertically on mobile */
+    flex: 1;
+    justify-content: center;
 }
 
 /* Navbar links styling */
 .navbar-nav {
     display: flex;
-    flex-direction: column; /* Stack items vertically on mobile */
     align-items: center;
-    width: 100%;
-    padding: 0; /* Remove default padding */
+    flex: 1;
+    justify-content: center; /* Center links in the middle */
 }
 
-.navbar-nav .nav-item {
-    width: 100%;
-    text-align: center;
+/* Ensure the last link has no margin */
+.navbar-nav .nav-item:last-child {
+    margin-right: 0;
 }
 
 /* Contact button styling */
@@ -117,7 +117,6 @@ button:hover {
     border-radius: 5px;
     cursor: pointer;
     align-self: center; /* Aligns the button vertically */
-    display: inline-block; /* Ensure button is inline with other items */
 }
 
 /* Contact button hover effect */
@@ -160,6 +159,21 @@ button:hover {
     width: auto; /* Maintain aspect ratio */
 }
 
+.button:hover {
+    background-color: var(--black);
+    color: var(--white);
+    text-decoration: none;
+    border: none;
+}
+
+.button {
+    padding: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: var(--black);
+    border: 1px solid var(--black);
+}
+
 /* Responsive styling for mobile devices */
 @media (max-width: 767px) {
     .navbar {
@@ -171,19 +185,16 @@ button:hover {
     .navbar-collapse {
         flex-direction: column;
         width: 100%;
-        display: none; /* Hide the menu by default */
-    }
-
-    .navbar-collapse.show {
-        display: flex; /* Show the menu when toggled */
+        text-align: center; /* Center text for mobile */
     }
 
     .navbar-nav {
-        display: flex;
-        flex-direction: column; /* Stack items vertically in the menu */
+        display: block;
+        margin-top: 10px;
     }
 
     .navbar-nav .nav-item {
+        margin-right: 0;
         margin-bottom: 10px; /* Space between items */
     }
 
