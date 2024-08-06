@@ -93,6 +93,9 @@ button:hover {
     flex-direction: row; /* Align items horizontally on desktop */
     justify-content: center; /* Center items horizontally */
     width: 100%;
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+    opacity: 0;
+    visibility: hidden;
 }
 
 /* Navbar links styling */
@@ -170,11 +173,15 @@ button:hover {
     .navbar-collapse {
         flex-direction: column;
         width: 100%;
-        display: none; /* Hide the menu by default */
+        opacity: 1; /* Ensure menu is visible */
+        visibility: visible;
+        display: flex; /* Ensure the menu is shown */
     }
 
-    .navbar-collapse.show {
-        display: flex; /* Show the menu when toggled */
+    .navbar-collapse.collapse {
+        opacity: 0; /* Hide the menu */
+        visibility: hidden;
+        display: none; /* Hide the menu */
     }
 
     .navbar-nav {
@@ -193,7 +200,7 @@ button:hover {
         margin-bottom: 0;
     }
 
-    .contact-item {
+    .contact-button {
         margin-top: 10px; /* Space above contact button */
     }
 }
