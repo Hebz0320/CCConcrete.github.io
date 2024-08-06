@@ -98,6 +98,8 @@ button:hover {
 .navbar-nav {
     display: flex;
     align-items: center;
+    flex: 1;
+    justify-content: center; /* Center links in the middle */
 }
 
 /* Ensure the last link has no margin */
@@ -173,6 +175,39 @@ button:hover {
     border: 1px solid var(--black);
 }
 
+/* Responsive styling for mobile devices */
+@media (max-width: 767px) {
+    .navbar {
+        flex-direction: column;
+        height: auto; /* Adjust height for mobile */
+        padding: 0 10px; /* Adjust padding for mobile */
+    }
+
+    .navbar-collapse {
+        flex-direction: column;
+        width: 100%;
+        text-align: center; /* Center text for mobile */
+    }
+
+    .navbar-nav {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .navbar-nav .nav-item {
+        margin-right: 0;
+        margin-bottom: 10px; /* Space between items */
+    }
+
+    .navbar-nav .nav-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .contact-button {
+        margin-left: 0;
+        margin-top: 10px; /* Space above button */
+    }
+}
 
 /* Main Section  */
 
