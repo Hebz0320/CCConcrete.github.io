@@ -90,23 +90,22 @@ button:hover {
 /* Navbar links container */
 .navbar-collapse {
     display: flex;
-    flex-direction: column; /* Stack items vertically on mobile */
+    flex-direction: row; /* Align items horizontally on desktop */
+    justify-content: center; /* Center items horizontally */
     width: 100%;
-    text-align: center; /* Center text horizontally */
 }
 
 /* Navbar links styling */
 .navbar-nav {
     display: flex;
-    flex-direction: column; /* Stack items vertically on mobile */
-    align-items: center; /* Center items horizontally */
-    padding: 0; /* Remove default padding */
-    width: 100%; /* Full width to help centering */
+    flex-direction: row; /* Align items horizontally on desktop */
+    align-items: center; /* Center items vertically */
+    padding: 0;
+    margin: 0; /* Remove default margin */
 }
 
 .navbar-nav .nav-item {
-    width: 100%; /* Full width of the parent container */
-    text-align: center; /* Center text */
+    margin: 0 10px; /* Space between items */
 }
 
 /* Contact button styling */
@@ -140,7 +139,6 @@ button:hover {
 
 .navbar-nav .nav-link {
     font-size: 18px;
-    margin-right: 20px;
     color: var(--black) !important;
 }
 
