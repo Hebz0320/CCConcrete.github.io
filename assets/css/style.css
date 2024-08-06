@@ -90,15 +90,16 @@ button:hover {
 /* Navbar links container */
 .navbar-collapse {
     display: flex;
-    flex-direction: column; /* Stack vertically on mobile */
+    flex-direction: column; /* Stack items vertically on mobile */
 }
 
 /* Navbar links styling */
 .navbar-nav {
     display: flex;
-    flex-direction: column; /* Stack links vertically on mobile */
+    flex-direction: column; /* Stack items vertically on mobile */
     align-items: center;
     width: 100%;
+    padding: 0; /* Remove default padding */
 }
 
 .navbar-nav .nav-item {
@@ -106,14 +107,8 @@ button:hover {
     text-align: center;
 }
 
-/* Ensure the last link has no margin */
-.navbar-nav .nav-item:last-child {
-    margin-right: 0;
-}
-
 /* Contact button styling */
 .contact-button {
-    margin: 10px 0; /* Space above and below button on mobile */
     padding: 10px 20px;
     font-size: 18px;
     color: var(--black); /* Text color */
@@ -121,6 +116,8 @@ button:hover {
     border: 1px solid var(--black); /* Border color */
     border-radius: 5px;
     cursor: pointer;
+    align-self: center; /* Aligns the button vertically */
+    display: inline-block; /* Ensure button is inline with other items */
 }
 
 /* Contact button hover effect */
@@ -174,17 +171,19 @@ button:hover {
     .navbar-collapse {
         flex-direction: column;
         width: 100%;
-        text-align: center; /* Center text for mobile */
-        display: block; /* Ensure collapsible menu is displayed */
+        display: none; /* Hide the menu by default */
+    }
+
+    .navbar-collapse.show {
+        display: flex; /* Show the menu when toggled */
     }
 
     .navbar-nav {
-        display: block;
-        margin-top: 10px;
+        display: flex;
+        flex-direction: column; /* Stack items vertically in the menu */
     }
 
     .navbar-nav .nav-item {
-        margin-right: 0;
         margin-bottom: 10px; /* Space between items */
     }
 
