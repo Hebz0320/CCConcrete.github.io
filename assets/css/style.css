@@ -321,6 +321,22 @@ button:hover {
     background-color: #000;
 }
 
+/* Responsive styling for Carousel Section */
+@media (max-width: 767px) {
+    .carousel-inner {
+        max-height: 300px; /* Reduce max height for mobile */
+    }
+
+    .carousel-item img {
+        max-height: 300px; /* Ensure images do not exceed the reduced maximum height */
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 10%; /* Adjust width for better usability on mobile */
+    }
+}
+
 /* Counter Section */
 
 .counter {
