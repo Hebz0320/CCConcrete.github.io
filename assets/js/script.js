@@ -1,5 +1,4 @@
 // Counter
-
 document.addEventListener("DOMContentLoaded", () => {
     function counter(id, start, end, duration) {
         let obj = document.getElementById(id),
@@ -24,10 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     counter("count4", 0, 7110, 3000);
 });
 
-
-
-// Scroll 
-
+// Scroll
 window.addEventListener('scroll', reveal);
 
 function reveal(){
@@ -46,4 +42,16 @@ function reveal(){
         }
     }
 }
+
+// Close the navbar when a link is clicked
+document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        const navbarCollapse = document.getElementById('collapsibleNavId');
+        if (navbarCollapse.classList.contains('show')) {
+            new bootstrap.Collapse(navbarCollapse, {
+                toggle: false
+            }).hide();
+        }
+    });
+});
 
