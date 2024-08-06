@@ -1,5 +1,5 @@
-// Counter
 document.addEventListener("DOMContentLoaded", () => {
+    // Counter code
     function counter(id, start, end, duration) {
         let obj = document.getElementById(id),
             current = start,
@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 obj.textContent = current;
                 if (current === end) {
                     clearInterval(timer);
-                    // Set a fixed height after the counting is done
                     obj.parentElement.style.height = obj.parentElement.scrollHeight + 'px';
                 }
             }, step);
@@ -21,39 +20,45 @@ document.addEventListener("DOMContentLoaded", () => {
     counter("count2", 100, 5786, 2500);
     counter("count3", 0, 1440, 3000);
     counter("count4", 0, 7110, 3000);
+
+    // Close the navbar when a link or button is clicked
+    document.querySelectorAll('.navbar-nav .nav-link, .contact-button').forEach(element => {
+        element.addEventListener('click', () => {
+            const navbarCollapse = document.getElementById('collapsibleNavId');
+            if (navbarCollapse.classList.contains('show')) {
+                new bootstrap.Collapse(navbarCollapse, {
+                    toggle: false
+                }).hide();
+            }
+        });
+    });
 });
 
-// Scroll
-window.addEventListener('scroll', reveal);
+// Fix for Bootstrap's default behavior
+document.addEventListener('DOMContentLoaded', () => {
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.getElementById('collapsibleNavId');
 
-function reveal(){
-    var reveals = document.querySelectorAll('.reveal');
-
-    for(var i =0; i< reveals.length; i++){
-
-        var windowheight = window.innerHeight;
-        var revealtop = reveals[i].getBoundingClientRect().top;
-        var revealpoint = 150;
-
-        if(revealtop < windowheight - revealpoint){
-            reveals[i].classList.add('active');
-        }else{
-            reveals[i].classList.remove('active');
-        }
-    }
-}
-
-// Close the navbar when a link or button is clicked
-document.querySelectorAll('.navbar-nav .nav-link, .contact-button').forEach(element => {
-    element.addEventListener('click', () => {
-        const navbarCollapse = document.getElementById('collapsibleNavId');
+    navbarToggler.addEventListener('click', () => {
         if (navbarCollapse.classList.contains('show')) {
-            new bootstrap.Collapse(navbarCollapse, {
-                toggle: false
-            }).hide();
+            navbarCollapse.classList.remove('show');
+            navbarCollapse.style.transition = 'none'; // Disable transition during hide
+            setTimeout(() => {
+                navbarCollapse.style.opacity = '0';
+                navbarCollapse.style.visibility = 'hidden';
+                navbarCollapse.style.transition = ''; // Re-enable transition
+            }, 300); // Match with your transition time
+        } else {
+            navbarCollapse.style.opacity = '0';
+            navbarCollapse.style.visibility = 'visible';
+            setTimeout(() => {
+                navbarCollapse.classList.add('show');
+                navbarCollapse.style.opacity = '1';
+            }, 10); // Short delay to ensure opacity transition
         }
     });
 });
+
 
 
 
