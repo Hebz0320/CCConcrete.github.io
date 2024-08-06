@@ -259,10 +259,8 @@ button:hover {
 
 .carousel-item img {
     width: 100%;
-    height: 100%; /* Ensure images cover the height */
-    max-height: 500px; /* Ensure images do not exceed the maximum height */
-    object-fit: contain; /* Ensures the image fits within the container without cropping */
-    cursor: pointer; /* Add pointer cursor to indicate clickability */
+    height: auto; /* Keep aspect ratio */
+    object-fit: cover; /* Ensure images cover the carousel item */
 }
 
 .carousel-control-prev,
@@ -366,10 +364,10 @@ button:hover {
     cursor: pointer;
 }
 
-/* Responsive adjustments */
+/* Responsive CSS for mobile devices */
 @media (max-width: 767px) {
     .carousel-item img {
-        max-height: 600px; /* Increase image size on mobile */
+        height: 70vh; /* Adjust height to make images larger */
     }
 }
 
