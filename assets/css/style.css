@@ -261,6 +261,7 @@ button:hover {
     width: 100%;
     height: auto; /* Keep aspect ratio */
     object-fit: cover; /* Ensure images cover the carousel item */
+    cursor: pointer; /* Indicate that the image is clickable */
 }
 
 .carousel-control-prev,
