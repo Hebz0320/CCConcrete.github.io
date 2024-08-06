@@ -29,14 +29,15 @@ window.addEventListener('scroll', reveal);
 function reveal(){
     var reveals = document.querySelectorAll('.reveal');
 
-    for(var i = 0; i < reveals.length; i++){
-        var windowHeight = window.innerHeight;
-        var revealTop = reveals[i].getBoundingClientRect().top;
-        var revealPoint = 150;
+    for(var i =0; i< reveals.length; i++){
 
-        if (revealTop < windowHeight - revealPoint) {
+        var windowheight = window.innerHeight;
+        var revealtop = reveals[i].getBoundingClientRect().top;
+        var revealpoint = 150;
+
+        if(revealtop < windowheight - revealpoint){
             reveals[i].classList.add('active');
-        } else {
+        }else{
             reveals[i].classList.remove('active');
         }
     }
@@ -47,8 +48,9 @@ document.querySelectorAll('.navbar-nav .nav-link, .contact-button').forEach(elem
     element.addEventListener('click', () => {
         const navbarCollapse = document.getElementById('collapsibleNavId');
         if (navbarCollapse.classList.contains('show')) {
-            // Use Bootstrap’s collapse method to hide the menu
-            bootstrap.Collapse.getInstance(navbarCollapse).hide();
+            new bootstrap.Collapse(navbarCollapse, {
+                toggle: false
+            }).hide();
         }
     });
 });
