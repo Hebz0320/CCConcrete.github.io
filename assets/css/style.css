@@ -90,25 +90,21 @@ button:hover {
 /* Navbar links container */
 .navbar-collapse {
     display: flex;
-    flex: 1;
-    justify-content: center;
+    flex-direction: column; /* Stack items vertically on mobile */
 }
 
 /* Navbar links styling */
 .navbar-nav {
     display: flex;
+    flex-direction: column; /* Stack items vertically on mobile */
     align-items: center;
-    flex: 1;
-    justify-content: center; /* Center links in the middle */
+    width: 100%;
+    padding: 0; /* Remove default padding */
 }
 
-/* Ensure the last link has no margin */
 .navbar-nav .nav-item {
-    margin: 0 10px; /* Adjust spacing between items */
-}
-
-.navbar-nav .nav-item:last-child {
-    margin-right: 0;
+    width: 100%;
+    text-align: center;
 }
 
 /* Contact button styling */
@@ -121,6 +117,7 @@ button:hover {
     border-radius: 5px;
     cursor: pointer;
     align-self: center; /* Aligns the button vertically */
+    display: inline-block; /* Ensure button is inline with other items */
 }
 
 /* Contact button hover effect */
@@ -142,6 +139,7 @@ button:hover {
 
 .navbar-nav .nav-link {
     font-size: 18px;
+    margin-right: 20px;
     color: var(--black) !important;
 }
 
@@ -162,21 +160,6 @@ button:hover {
     width: auto; /* Maintain aspect ratio */
 }
 
-.button:hover {
-    background-color: var(--black);
-    color: var(--white);
-    text-decoration: none;
-    border: none;
-}
-
-.button {
-    padding: 10px;
-    font-size: 18px;
-    text-transform: uppercase;
-    color: var(--black);
-    border: 1px solid var(--black);
-}
-
 /* Responsive styling for mobile devices */
 @media (max-width: 767px) {
     .navbar {
@@ -188,20 +171,29 @@ button:hover {
     .navbar-collapse {
         flex-direction: column;
         width: 100%;
-        text-align: center; /* Center text for mobile */
+        display: none; /* Hide the menu by default */
+    }
+
+    .navbar-collapse.show {
+        display: flex; /* Show the menu when toggled */
     }
 
     .navbar-nav {
-        display: block;
-        margin-top: 10px;
+        display: flex;
+        flex-direction: column; /* Stack items vertically in the menu */
     }
 
     .navbar-nav .nav-item {
-        margin: 10px 0; /* Adjust spacing between items */
+        margin-bottom: 10px; /* Space between items */
+    }
+
+    .navbar-nav .nav-item:last-child {
+        margin-bottom: 0;
     }
 
     .contact-button {
         margin-top: 10px; /* Space above button */
+        align-self: center; /* Center the button in the menu */
     }
 }
 
