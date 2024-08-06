@@ -26,18 +26,17 @@ document.addEventListener("DOMContentLoaded", () => {
 // Scroll
 window.addEventListener('scroll', reveal);
 
-function reveal(){
+function reveal() {
     var reveals = document.querySelectorAll('.reveal');
 
-    for(var i =0; i< reveals.length; i++){
-
+    for (var i = 0; i < reveals.length; i++) {
         var windowheight = window.innerHeight;
         var revealtop = reveals[i].getBoundingClientRect().top;
         var revealpoint = 150;
 
-        if(revealtop < windowheight - revealpoint){
+        if (revealtop < windowheight - revealpoint) {
             reveals[i].classList.add('active');
-        }else{
+        } else {
             reveals[i].classList.remove('active');
         }
     }
@@ -48,9 +47,7 @@ document.querySelectorAll('.navbar-nav .nav-link, .contact-button').forEach(elem
     element.addEventListener('click', () => {
         const navbarCollapse = document.getElementById('collapsibleNavId');
         if (navbarCollapse.classList.contains('show')) {
-            new bootstrap.Collapse(navbarCollapse, {
-                toggle: false
-            }).hide();
+            new bootstrap.Collapse(navbarCollapse).hide(); // Use default collapse behavior
         }
     });
 });
