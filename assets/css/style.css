@@ -94,8 +94,6 @@ button:hover {
     justify-content: center; /* Center items horizontally */
     width: 100%;
     transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
-    opacity: 0;
-    visibility: hidden;
 }
 
 /* Navbar links styling */
@@ -173,15 +171,15 @@ button:hover {
     .navbar-collapse {
         flex-direction: column;
         width: 100%;
-        opacity: 1; /* Ensure menu is visible */
-        visibility: visible;
-        display: flex; /* Ensure the menu is shown */
+        opacity: 0; /* Hide by default */
+        visibility: hidden;
+        display: flex; /* Show when toggled */
     }
 
-    .navbar-collapse.collapse {
-        opacity: 0; /* Hide the menu */
-        visibility: hidden;
-        display: none; /* Hide the menu */
+    .navbar-collapse.show {
+        opacity: 1; /* Show the menu when toggled */
+        visibility: visible;
+        display: flex;
     }
 
     .navbar-nav {
