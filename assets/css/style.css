@@ -91,20 +91,22 @@ button:hover {
 .navbar-collapse {
     display: flex;
     flex-direction: column; /* Stack items vertically on mobile */
+    width: 100%;
+    text-align: center; /* Center text horizontally */
 }
 
 /* Navbar links styling */
 .navbar-nav {
     display: flex;
     flex-direction: column; /* Stack items vertically on mobile */
-    align-items: center;
-    width: 100%;
+    align-items: center; /* Center items horizontally */
     padding: 0; /* Remove default padding */
+    width: 100%; /* Full width to help centering */
 }
 
 .navbar-nav .nav-item {
-    width: 100%;
-    text-align: center;
+    width: 100%; /* Full width of the parent container */
+    text-align: center; /* Center text */
 }
 
 /* Contact button styling */
@@ -116,8 +118,9 @@ button:hover {
     border: 1px solid var(--black); /* Border color */
     border-radius: 5px;
     cursor: pointer;
-    align-self: center; /* Aligns the button vertically */
+    align-self: center; /* Center the button */
     display: inline-block; /* Ensure button is inline with other items */
+    margin-top: 10px; /* Space above button */
 }
 
 /* Contact button hover effect */
@@ -181,19 +184,17 @@ button:hover {
     .navbar-nav {
         display: flex;
         flex-direction: column; /* Stack items vertically in the menu */
+        align-items: center; /* Center items horizontally */
+        width: 100%; /* Full width for proper centering */
     }
 
     .navbar-nav .nav-item {
         margin-bottom: 10px; /* Space between items */
+        width: auto; /* Auto width to fit content */
     }
 
     .navbar-nav .nav-item:last-child {
         margin-bottom: 0;
-    }
-
-    .contact-button {
-        margin-top: 10px; /* Space above button */
-        align-self: center; /* Center the button in the menu */
     }
 }
 
