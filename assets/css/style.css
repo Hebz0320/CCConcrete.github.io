@@ -87,26 +87,38 @@ button:hover {
     box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.2);
 }
 
+/* Navbar container styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 100px;
+    background: var(--white);
+    box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.2);
+}
+
 /* Navbar links container */
 .navbar-collapse {
     display: flex;
-    flex-direction: row; /* Align items horizontally on desktop */
-    justify-content: center; /* Center items horizontally */
+    flex-direction: column; /* Stack items vertically on mobile */
     width: 100%;
+    opacity: 0; /* Hide by default */
+    visibility: hidden; /* Hide by default */
     transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
 }
 
 /* Navbar links styling */
 .navbar-nav {
     display: flex;
-    flex-direction: row; /* Align items horizontally on desktop */
-    align-items: center; /* Center items vertically */
+    flex-direction: column; /* Stack items vertically on mobile */
+    align-items: center; /* Center items horizontally */
     padding: 0;
     margin: 0; /* Remove default margin */
 }
 
 .navbar-nav .nav-item {
-    margin: 0 10px; /* Space between items */
+    margin-bottom: 10px; /* Space between items */
 }
 
 /* Contact button styling */
@@ -126,40 +138,6 @@ button:hover {
     background: var(--gray);
 }
 
-/* Other existing navbar styles */
-.navbar-toggler {
-    border: none;
-    color: var(--black);
-}
-
-.navbar-toggler:hover {
-    border: none;
-    background-color: var(--dark-gray);
-    color: var(--white);
-}
-
-.navbar-nav .nav-link {
-    font-size: 18px;
-    color: var(--black) !important;
-}
-
-.navbar-nav .nav-link:hover {
-    color: var(--black) !important;
-    text-decoration: none;
-    letter-spacing: 2px;
-}
-
-.navbar-nav a {
-    font-size: 15px;
-    text-transform: uppercase;
-    font-weight: 500;
-}
-
-.navbar-light .navbar-brand img {
-    height: 145px;
-    width: auto; /* Maintain aspect ratio */
-}
-
 /* Responsive styling for mobile devices */
 @media (max-width: 767px) {
     .navbar {
@@ -168,38 +146,9 @@ button:hover {
         padding: 0 10px; /* Adjust padding for mobile */
     }
 
-    .navbar-collapse {
-        flex-direction: column;
-        width: 100%;
-        opacity: 0; /* Hide by default */
-        visibility: hidden;
-        display: flex; /* Show when toggled */
-    }
-
     .navbar-collapse.show {
         opacity: 1; /* Show the menu when toggled */
-        visibility: visible;
-        display: flex;
-    }
-
-    .navbar-nav {
-        display: flex;
-        flex-direction: column; /* Stack items vertically in the menu */
-        align-items: center; /* Center items horizontally */
-        width: 100%; /* Full width for proper centering */
-    }
-
-    .navbar-nav .nav-item {
-        margin-bottom: 10px; /* Space between items */
-        width: auto; /* Auto width to fit content */
-    }
-
-    .navbar-nav .nav-item:last-child {
-        margin-bottom: 0;
-    }
-
-    .contact-button {
-        margin-top: 10px; /* Space above contact button */
+        visibility: visible; /* Make it visible */
     }
 }
 
