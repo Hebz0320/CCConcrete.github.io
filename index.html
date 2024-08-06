@@ -15,6 +15,10 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Lightbox CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -79,19 +83,29 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="assets/images/Driveway.jpg" class="d-block w-100" alt="Driveway">
+          <a href="assets/images/Driveway.jpg" data-lightbox="carousel">
+            <img src="assets/images/Driveway.jpg" class="d-block w-100" alt="Driveway">
+          </a>
         </div>
         <div class="carousel-item">
-          <img src="assets/images/PoolProject.jpg" class="d-block w-100" alt="Pool Project">
+          <a href="assets/images/PoolProject.jpg" data-lightbox="carousel">
+            <img src="assets/images/PoolProject.jpg" class="d-block w-100" alt="Pool Project">
+          </a>
         </div>
         <div class="carousel-item">
-          <img src="assets/images/PoolProject2.jpg" class="d-block w-100" alt="Pool Project 2">
+          <a href="assets/images/PoolProject2.jpg" data-lightbox="carousel">
+            <img src="assets/images/PoolProject2.jpg" class="d-block w-100" alt="Pool Project 2">
+          </a>
         </div>
         <div class="carousel-item">
-          <img src="assets/images/Patio.JPEG" class="d-block w-100" alt="Home 4">
+          <a href="assets/images/Patio.JPEG" data-lightbox="carousel">
+            <img src="assets/images/Patio.JPEG" class="d-block w-100" alt="Home 4">
+          </a>
         </div>
         <div class="carousel-item">
-          <img src="assets/images/Front Trailer.jpg" class="d-block w-100" alt="Home 5">
+          <a href="assets/images/Front Trailer.jpg" data-lightbox="carousel">
+            <img src="assets/images/Front Trailer.jpg" class="d-block w-100" alt="Home 5">
+          </a>
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -477,6 +491,9 @@
 
 
   <script src="assets/js/script.js"></script>
+
+  <!-- Lightbox JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 
 </body>
 
