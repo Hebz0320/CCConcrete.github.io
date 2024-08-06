@@ -1,17 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Close the navbar when a link or button is clicked
-    document.querySelectorAll('.navbar-nav .nav-link, .contact-button').forEach(element => {
-        element.addEventListener('click', () => {
-            const navbarCollapse = document.getElementById('collapsibleNavId');
-            if (navbarCollapse.classList.contains('show')) {
-                const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
-                    toggle: false
-                });
-                bsCollapse.hide();
-            }
-        });
-    });
-
     // Handle navbar toggler click
     document.querySelector('.navbar-toggler').addEventListener('click', () => {
         const navbarCollapse = document.getElementById('collapsibleNavId');
@@ -24,6 +11,19 @@ document.addEventListener('DOMContentLoaded', () => {
             navbarCollapse.style.opacity = '1';
             navbarCollapse.style.visibility = 'visible';
         }
+    });
+
+    // Close the navbar when a link or button is clicked
+    document.querySelectorAll('.navbar-nav .nav-link, .contact-button').forEach(element => {
+        element.addEventListener('click', () => {
+            const navbarCollapse = document.getElementById('collapsibleNavId');
+            if (navbarCollapse.classList.contains('show')) {
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                    toggle: false
+                });
+                bsCollapse.hide();
+            }
+        });
     });
 });
 
@@ -65,6 +65,7 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
 
 
 
