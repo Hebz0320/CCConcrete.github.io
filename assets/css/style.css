@@ -110,9 +110,9 @@ button:hover {
     margin-left: auto; /* Pushes the button to the far right */
     padding: 10px 20px;
     font-size: 18px;
-    color: var(--white);
-    background: var(--black);
-    border: none;
+    color: var(--black); /* Text color */
+    background: var(--white); /* Background color */
+    border: 1px solid var(--black); /* Border color */
     border-radius: 5px;
     cursor: pointer;
     align-self: center; /* Aligns the button vertically */
