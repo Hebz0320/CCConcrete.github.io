@@ -1,70 +1,67 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Handle navbar toggler click
-    document.querySelector('.navbar-toggler').addEventListener('click', () => {
-        const navbarCollapse = document.getElementById('collapsibleNavId');
-        if (navbarCollapse.classList.contains('show')) {
-            navbarCollapse.classList.remove('show');
-            navbarCollapse.style.opacity = '0';
-            navbarCollapse.style.visibility = 'hidden';
-        } else {
-            navbarCollapse.classList.add('show');
-            navbarCollapse.style.opacity = '1';
-            navbarCollapse.style.visibility = 'visible';
-        }
+// Wait for the DOM to fully load
+document.addEventListener("DOMContentLoaded", () => {
+    // Function to handle counter animation (if needed)
+    function counter(id, start, end, duration) {
+        let obj = document.getElementById(id),
+            current = start,
+            range = end - start,
+            increment = end > start ? 1 : -1,
+            step = Math.abs(Math.floor(duration / range)),
+            timer = setInterval(() => {
+                current += increment;
+                obj.textContent = current;
+                if (current === end) {
+                    clearInterval(timer);
+                    obj.parentElement.style.height = obj.parentElement.scrollHeight + 'px';
+                }
+            }, step);
+    }
+
+    // Example counters (if needed)
+    counter("count1", 0, 1287, 3000);
+    counter("count2", 100, 5786, 2500);
+    counter("count3", 0, 1440, 3000);
+    counter("count4", 0, 7110, 3000);
+
+    // Initialize Bootstrap Collapse manually
+    const collapseElementList = [].slice.call(document.querySelectorAll('.collapse'))
+    const collapseList = collapseElementList.map(function (collapseEl) {
+        return new bootstrap.Collapse(collapseEl, {
+            toggle: false
+        })
     });
 
     // Close the navbar when a link or button is clicked
     document.querySelectorAll('.navbar-nav .nav-link, .contact-button').forEach(element => {
         element.addEventListener('click', () => {
             const navbarCollapse = document.getElementById('collapsibleNavId');
-            if (navbarCollapse.classList.contains('show')) {
-                const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
-                    toggle: false
-                });
-                bsCollapse.hide();
+            const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse); // Get the instance
+            if (bsCollapse) {
+                bsCollapse.hide(); // Hide the menu
             }
         });
     });
 });
 
-// Counter
-function counter(id, start, end, duration) {
-    let obj = document.getElementById(id),
-        current = start,
-        range = end - start,
-        increment = end > start ? 1 : -1,
-        step = Math.abs(Math.floor(duration / range)),
-        timer = setInterval(() => {
-            current += increment;
-            obj.textContent = current;
-            if (current === end) {
-                clearInterval(timer);
-                obj.parentElement.style.height = obj.parentElement.scrollHeight + 'px';
-            }
-        }, step);
-}
+// Scroll animation
+window.addEventListener('scroll', reveal);
 
-document.addEventListener("DOMContentLoaded", () => {
-    counter("count1", 0, 1287, 3000);
-    counter("count2", 100, 5786, 2500);
-    counter("count3", 0, 1440, 3000);
-    counter("count4", 0, 7110, 3000);
-});
+function reveal(){
+    var reveals = document.querySelectorAll('.reveal');
 
-// Scroll Reveal
-window.addEventListener('scroll', () => {
-    document.querySelectorAll('.reveal').forEach(reveal => {
-        const windowHeight = window.innerHeight;
-        const revealTop = reveal.getBoundingClientRect().top;
-        const revealPoint = 150;
+    for(var i = 0; i < reveals.length; i++){
+        var windowHeight = window.innerHeight;
+        var revealTop = reveals[i].getBoundingClientRect().top;
+        var revealPoint = 150;
 
         if (revealTop < windowHeight - revealPoint) {
-            reveal.classList.add('active');
+            reveals[i].classList.add('active');
         } else {
-            reveal.classList.remove('active');
+            reveals[i].classList.remove('active');
         }
-    });
-});
+    }
+}
+
 
 
 
