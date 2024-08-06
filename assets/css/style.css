@@ -202,6 +202,7 @@ button:hover {
         margin-top: 10px; /* Space above contact button */
     }
 }
+
 /* Main Section  */
 
 .main h1 {
@@ -213,6 +214,18 @@ button:hover {
     color: var(--gray);
     margin-top: 100px;
     font-size: 20px;
+}
+
+@media (max-width: 767px) {
+    .main h1 {
+        font-size: 30px; /* Adjusted for mobile */
+        margin-top: 50px; /* Reduced top margin */
+    }
+
+    .main p {
+        font-size: 16px; /* Adjusted for mobile */
+        margin-top: 20px; /* Reduced top margin */
+    }
 }
 
 /* Carousel Section */
@@ -308,6 +321,16 @@ button:hover {
     background-color: #000;
 }
 
+@media (max-width: 767px) {
+    .carousel-inner {
+        max-height: 300px; /* Reduced height for mobile */
+    }
+
+    .carousel-item img {
+        max-height: 300px; /* Adjusted for mobile */
+    }
+}
+
 /* Counter Section */
 
 .counter {
@@ -338,493 +361,170 @@ button:hover {
     font-size: 3rem; /* Use relative units for better responsiveness */
     font-weight: 300;
     color: var(--cobalt-blue);
-    margin-right: 0.2em; /* Space between number and + */
+    margin-right: 0.5rem;
 }
 
-.counter .heading {
-    font-size: 1.875rem; /* Use relative units for better responsiveness */
-    color: var(--black-90);
-    margin-top: 0.05em; /* Tighter space between number and text */
-    text-transform: uppercase;
-}
+@media (max-width: 767px) {
+    .counter {
+        padding: 10px; /* Adjust padding for mobile */
+    }
 
-/* Ensure consistent height for the column */
-.counter .col-lg-2 {
-    min-height: 160px; /* Adjust as needed to prevent layout shifts */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px; /* Add padding to ensure content does not touch edges */
-}
-
-/* Responsive CSS for Counter Section */
-
-@media only screen and (max-width: 767px) {
     .counter h2 {
-        font-size: 2.5rem; /* Reduce font size for smaller screens */
+        font-size: 2rem; /* Adjust font size for mobile */
     }
 
     .counter span {
-        font-size: 2.5rem; /* Reduce font size for smaller screens */
-    }
-
-    .counter .heading {
-        font-size: 1.5rem; /* Reduce font size for smaller screens */
-        margin-top: 0.02em; /* Tighter spacing on smaller screens */
+        font-size: 2rem; /* Adjust font size for mobile */
     }
 }
 
-/* Work Section  */
+/* Team Section */
 
-.work h3 {
-    margin-top: 0;
-}
-
-.work h1 {
-    margin-top: 10px;
-    color: var(--black);
-}
-
-.work .card {
-    margin-top: 100px;
-    border-radius: 20px;
-    background: var(--white);
-}
-
-.work .card:hover {
-    box-shadow: 5px 5px 10px rgba(98, 98, 102, 0.7);
-    border: none;
-    transform: scale(0.9);
-}
-
-.work .card i {
-    font-size: 40px;
-    color: var(--black);
-}
-
-.work .card h4 {
-    font-size: 35px;
-    margin-top: 40px;
-    color: var(--black);
-}
-
-.work .card p {
-    font-size: 18px;
-    margin-top: 20px;
-    color: var(--gray);
-}
-
-/* About Section  */
-
-.about p {
-    color: var(--gray);
-}
-
-.about .about-img img {
-    border-radius: 20px;
-}
-
-.about .about-img img:hover {
-    transform: scale(1.3);
-    box-shadow: 5px 5px 10px rgba(98, 98, 102, 0.7);
-}
-
-.about .about-text {
-    margin-top: 50px;
-    margin-left: 10px;
-}
-
-.about .about-text ul li {
-    list-style: none;
-    font-size: 20px;
-    color: var(--gray);
-}
-
-/* Service Section  */
-
-.services h3 {
-    margin-top: 10px;
-}
-
-.services p {
-    color: var(--gray);
-}
-
-.services h1 {
-    margin-top: 10px;
-    color: var(--black);
-}
-
-.services .card {
-    margin-top: 50px;
-    border: none;
-}
-
-.services .card:hover {
-    transform: scale(0.9);
-    box-shadow: 5px 5px 10px rgba(98, 98, 102, 0.7);
-    border: none;
-}
-
-.services .card i {
-    font-size: 50px;
-    color: var(--black);
-}
-
-.services .card p {
-    font-size: 18px;
-    margin-top: 20px;
-    color: var(--gray);
-}
-
-/* Project Section  */
-
-.project p {
-    color: var(--gray);
-}
-
-.project p {
-    margin-top: 10px;
-}
-
-.project .card {
-    margin-top: 50px;
-    border: none;
-}
-
-.project .card:hover {
-    transform: scale(0.9);
-    box-shadow: 5px 5px 10px rgba(98, 98, 102, 0.7);
-    border: none;
-}
-
-.project .card h5 {
-    font-size: 25px;
-    color: var(--gray);
-}
-
-/* Choose Section  */
-
-.choose h1 {
-    margin-top: 0;
-    color: var(--black);
-}
-
-.choose p {
-    margin-top: 50px;
-    color: var(--gray);
-}
-
-.choose img {
-    height: 30px;
-    width: 30px;
-    margin-right: 10px;
-}
-
-.choose .card {
-    margin-top: 50px;
-    border: none;
-}
-
-.choose .card i {
-    color: var(--black);
-    font-size: 40px;
-}
-
-.choose .card:hover {
-    box-shadow: 5px 5px 10px rgba(98, 98, 102, 0.7);
-    border: none;
-}
-
-.choose .card h5 {
-    font-size: 25px;
-    margin-top: 40px;
-    color: var(--gray);
-}
-
-/* FAQ Section */
-
-.faq h1 {
-    margin-top: 0px;
-    color: var(--black);
-}
-
-.accordion {
-    margin: 50px auto;
-    width: 100%;
-    max-width: 900px;
-    color: var(--black);
-}
-
-.accordion p {
-    margin-top: 0;
-    color: var(--black);
-}
-
-.accordion li {
-    list-style: none;
-    width: 100%;
-    padding: 5px;
-}
-
-.accordion li label:hover {
-    color: var(--black);
-    background-color: var(--white);
-}
-
-.accordion li label {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    font-size: 20px;
-    background: var(--dark-gray);
-    margin-bottom: 10px;
-    cursor: pointer;
-    color: var(--white);
-}
-
-.accordion li input {
-    display: none;
-}
-
-.accordion li input:checked ~ .content {
-    display: block;
-}
-
-.accordion .content {
-    display: none;
-    padding: 20px;
-    background: var(--white);
-    color: var(--black);
-}
-
-.accordion .content p {
-    font-size: 18px;
-    color: var(--black);
-}
-
-/* Contact Section */
-
-.contact {
+.team {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
     padding: 50px;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
 }
 
-.contact img {
-    height: 150px; /* Adjusted size */
-    width: 150px; /* Adjusted size */
-    margin-right: 20px;
-    object-fit: cover; /* Ensures the image covers the area without distortion */
-    /* Remove border-radius to keep the square shape */
+.team-member {
+    flex-basis: calc(25% - 20px); /* Each team member takes up 25% of the container width, minus margins */
+    margin-bottom: 40px; /* Add margin to the bottom for spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: transform 0.3s ease; /* Add a smooth transition for the hover effect */
 }
 
-.contact p {
-    color: var(--gray);
-    margin-top: 20px;
+.team-member:hover {
+    transform: translateY(-5px); /* Slightly raise the card on hover */
 }
 
-.contact form {
-    max-width: 500px; /* Limit the width for better readability */
-    margin: auto;
+.team-member img {
+    width: 100%;
+    height: auto; /* Ensure the image maintains its aspect ratio */
+    margin-bottom: 15px;
+    border-radius: 10px;
 }
 
-.contact input,
-.contact textarea {
-    height: 50px;
-    padding: 20px;
+.team-member h3 {
+    font-size: 1.5rem; /* Use relative units for better responsiveness */
     color: var(--black);
-    background: var(--white);
-    border: 1px solid var(--gray);
-    border-radius: 5px; /* Add some border-radius for a modern look */
-    margin-bottom: 20px;
-    width: 100%; /* Make input fields responsive */
+    margin: 0;
 }
 
-.contact textarea {
-    height: 150px; /* Adjust height for text area */
+.team-member p {
+    font-size: 1rem; /* Use relative units for better responsiveness */
+    color: var(--gray);
+    margin: 5px 0 10px 0;
 }
 
-.contact button {
-    padding: 10px 20px; /* Add padding for a better button size */
-    font-size: 18px;
-    color: var(--white);
-    background: var(--black);
-    border: none;
-    border-radius: 5px; /* Rounded corners for the button */
-    cursor: pointer;
+@media (max-width: 767px) {
+    .team {
+        padding: 20px; /* Adjust padding for mobile */
+    }
+
+    .team-member {
+        flex-basis: calc(50% - 20px); /* Each team member takes up 50% of the container width, minus margins */
+    }
 }
 
-.contact button:hover {
-    background: var(--gray);
+/* Project Section */
+
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
 }
 
+.project-item {
+    flex-basis: calc(25% - 20px); /* Each project takes up 25% of the container width, minus margins */
+    margin-bottom: 40px; /* Add margin to the bottom for spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: transform 0.3s ease; /* Add a smooth transition for the hover effect */
+}
+
+.project-item:hover {
+    transform: translateY(-5px); /* Slightly raise the card on hover */
+}
+
+.project-item img {
+    width: 100%;
+    height: auto; /* Ensure the image maintains its aspect ratio */
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.project-item h3 {
+    font-size: 1.5rem; /* Use relative units for better responsiveness */
+    color: var(--black);
+    margin: 0;
+}
+
+.project-item p {
+    font-size: 1rem; /* Use relative units for better responsiveness */
+    color: var(--gray);
+    margin: 5px 0 10px 0;
+}
+
+@media (max-width: 767px) {
+    .project {
+        padding: 20px; /* Adjust padding for mobile */
+    }
+
+    .project-item {
+        flex-basis: calc(50% - 20px); /* Each project takes up 50% of the container width, minus margins */
+    }
+}
 
 /* Footer Section */
 
-.footer {
-    background: var(--dark-gray); /* Updated to Dark Gray */
-    color: var(--white);
-    padding: 30px 0; /* Added padding for spacing */
-}
-
-.footer .container {
-    max-width: 1200px; /* Limit the maximum width */
-    margin: 0 auto; /* Center the container */
-}
-
-.footer .row {
+footer {
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap on small screens */
-    justify-content: center; /* Center items horizontally */
-}
-
-.footer .col-12 {
-    text-align: center; /* Center text for small columns */
-}
-
-.footer img {
-    height: 200px; /* Reduced size for smaller screens */
-    width: auto; /* Maintain aspect ratio */
-}
-
-.footer h4 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--black);
     color: var(--white);
-    font-size: 18px; /* Adjusted font size for better mobile display */
-    margin-bottom: 15px; /* Adjusted margin */
+    font-size: 14px;
 }
 
-.footer ul {
-    padding: 0;
+footer p {
     margin: 0;
-    list-style: none; /* Remove bullets */
+    color: var(--white);
 }
 
-.footer ul li {
-    margin: 10px 0; /* Adjusted spacing between list items */
-}
-
-.footer ul li a {
+footer a {
+    color: var(--gray); /* Use gray color for links */
     text-decoration: none;
-    color: var(--white-20);
 }
 
-.footer .socials a {
-    color: var(--white-20);
-    margin: 0 10px; /* Added spacing between icons */
-    font-size: 20px; /* Adjusted font size for icons */
+footer a:hover {
+    color: var(--white); /* Change color on hover */
+    text-decoration: underline; /* Underline on hover */
 }
 
-.footer .socials a:hover {
-    color: var(--bright-blue);
-}
-
-/* Responsive CSS */
-@media only screen and (max-width: 767px) {
-    .footer .row {
-        text-align: center; /* Center align text on mobile */
-    }
-
-    .footer .col-lg-3 {
-        margin-bottom: 20px; /* Add spacing between columns on mobile */
-    }
-
-    .footer img {
-        height: 80px; /* Adjust size for smaller screens */
-    }
-
-    .footer h4 {
-        font-size: 16px; /* Smaller font size on mobile */
+@media (max-width: 767px) {
+    footer {
+        font-size: 12px; /* Adjust font size for mobile */
+        padding: 10px; /* Adjust padding for mobile */
     }
 }
 
-
-/* Responsive CSS  */
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    .button {
-        margin-left: 0;
-    }
-    .navbar {
-        height: 150px;
-    }
-    .navbar-nav {
-        text-align: center;
-        background-color: var(--white);
-    }
-    .img-area img {
-        width: 100%;
-    }
-    .main h1 {
-        margin-top: 150px;
-    }
-    .main p {
-        margin-top: 10px;
-    }
-    .counter {
-        text-align: center;
-    }
-    .subscription input {
-        width: 70%;
-    }
-}
-
-@media only screen and (max-width: 991px) {
-    .navbar-nav {
-        text-align: center;
-        background-color: var(--light-blue);
-        height: 35vh;
-    }
-    .navbar {
-        height: 150px;
-    }
-    .footer {
-        text-align: center;
-    }
-}
-
-@media only screen and (max-width: 767px) {
-    .button {
-        margin-left: 0;
-    }
-    .navbar {
-        height: 150px;
-    }
-    .navbar-nav {
-        text-align: center;
-        background-color: var(--white);
-        width: 100%;
-        height: 30vh;
-    }
-    .main h1 {
-        margin-top: 150px;
-    }
-
-    .main p {
-        margin-top: 10px;
-    }
-    .counter {
-        text-align: center;
-    }
-    .work .card {
-        margin-top: 10px;
-    }
-    .carousel li {
-        background: var(--bright-blue);
-    }
-    .carousel li.active {
-        background: var(--cobalt-blue);
-    }
-    .about-text {
-        padding-top: 50px;
-    }
-    .subscription input {
-        width: 50%;
-    }
-    .footer {
-        text-align: center;
-    }
-}
