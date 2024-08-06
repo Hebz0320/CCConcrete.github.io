@@ -53,32 +53,35 @@ document.querySelectorAll('.navbar-nav .nav-link, .contact-button').forEach(elem
 });
 
 // Lightbox functionality
-document.addEventListener("DOMContentLoaded", () => {
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const closeBtn = document.querySelector('.lightbox .close');
-    const caption = document.getElementById('caption');
+const images = document.querySelectorAll('#carousel .carousel-item img');
+const lightbox = document.createElement('div');
+lightbox.classList.add('lightbox');
+lightbox.innerHTML = `
+    <span class="lightbox-close">&times;</span>
+    <div class="lightbox-content">
+        <img src="" alt="Lightbox Image">
+    </div>
+`;
+document.body.appendChild(lightbox);
 
-    // Open lightbox
-    document.querySelectorAll('.carousel-item img').forEach(img => {
-        img.addEventListener('click', () => {
-            lightbox.style.display = 'block';
-            lightboxImg.src = img.src;
-            caption.textContent = img.alt;
-        });
+const lightboxImage = lightbox.querySelector('.lightbox-content img');
+const lightboxClose = lightbox.querySelector('.lightbox-close');
+
+images.forEach(image => {
+    image.addEventListener('click', () => {
+        lightboxImage.src = image.src;
+        lightbox.style.display = 'block';
     });
+});
 
-    // Close lightbox
-    closeBtn.addEventListener('click', () => {
+lightboxClose.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+});
+
+window.addEventListener('click', (event) => {
+    if (event.target === lightbox) {
         lightbox.style.display = 'none';
-    });
-
-    // Close lightbox when clicking outside of image
-    lightbox.addEventListener('click', (event) => {
-        if (event.target === lightbox) {
-            lightbox.style.display = 'none';
-        }
-    });
+    }
 });
 
 
