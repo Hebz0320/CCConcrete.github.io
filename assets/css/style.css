@@ -118,9 +118,7 @@ button:hover {
     border: 1px solid var(--black); /* Border color */
     border-radius: 5px;
     cursor: pointer;
-    align-self: center; /* Center the button */
     display: inline-block; /* Ensure button is inline with other items */
-    margin-top: 10px; /* Space above button */
 }
 
 /* Contact button hover effect */
@@ -195,6 +193,10 @@ button:hover {
 
     .navbar-nav .nav-item:last-child {
         margin-bottom: 0;
+    }
+
+    .contact-item {
+        margin-top: 10px; /* Space above contact button */
     }
 }
 
