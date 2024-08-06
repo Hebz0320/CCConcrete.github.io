@@ -103,6 +103,10 @@ button:hover {
 }
 
 /* Ensure the last link has no margin */
+.navbar-nav .nav-item {
+    margin: 0 10px; /* Adjust spacing between items */
+}
+
 .navbar-nav .nav-item:last-child {
     margin-right: 0;
 }
@@ -138,7 +142,6 @@ button:hover {
 
 .navbar-nav .nav-link {
     font-size: 18px;
-    margin-right: 20px;
     color: var(--black) !important;
 }
 
@@ -194,12 +197,7 @@ button:hover {
     }
 
     .navbar-nav .nav-item {
-        margin-right: 0;
-        margin-bottom: 10px; /* Space between items */
-    }
-
-    .navbar-nav .nav-item:last-child {
-        margin-bottom: 0;
+        margin: 10px 0; /* Adjust spacing between items */
     }
 
     .contact-button {
