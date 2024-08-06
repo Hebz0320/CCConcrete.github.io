@@ -43,9 +43,9 @@ function reveal(){
     }
 }
 
-// Close the navbar when a link is clicked
-document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
-    link.addEventListener('click', () => {
+// Close the navbar when a link or button is clicked
+document.querySelectorAll('.navbar-nav .nav-link, .contact-button').forEach(element => {
+    element.addEventListener('click', () => {
         const navbarCollapse = document.getElementById('collapsibleNavId');
         if (navbarCollapse.classList.contains('show')) {
             new bootstrap.Collapse(navbarCollapse, {
@@ -54,4 +54,5 @@ document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
         }
     });
 });
+
 
