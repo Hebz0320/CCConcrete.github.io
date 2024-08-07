@@ -441,33 +441,43 @@ button:hover {
     color: var(--gray);
 }
 
+/* Center text and control width */
 .about .about-text {
-    margin-top: 50px;
-    margin-left: 10px;
+    margin: 20px auto; /* Center with auto margins */
+    max-width: 600px; /* Limit the maximum width for better readability */
+    text-align: center; /* Center the text */
 }
 
 /* Adjust text list items */
+.about .about-text ul {
+    padding-left: 0; /* Remove default padding from the list */
+    margin: 0; /* Remove default margin */
+    text-align: left; /* Align text to the left for the list items */
+}
+
+/* Ensure list items are on one line */
 .about .about-text ul li {
     list-style: none;
-    font-size: 20px;
+    font-size: 18px; /* Adjust font size for readability */
     color: var(--gray);
+    margin-bottom: 10px; /* Add spacing between list items */
+    word-wrap: break-word; /* Ensure long words break to fit the container */
 }
 
 /* Responsive styling for Mobile */
 @media (max-width: 767px) {
     .about .about-text {
-        margin-left: 0; /* Remove left margin on mobile */
-        padding: 0 15px; /* Add some padding for better spacing */
+        padding: 0 15px; /* Add some padding for better spacing on mobile */
+        text-align: center; /* Center the text */
+    }
+
+    .about .about-text ul {
+        padding-left: 0; /* Remove padding for mobile view */
     }
 
     .about .about-text ul li {
-        font-size: 20px; /* Adjust font size for better readability */
-        margin-bottom: 10px; /* Add spacing between list items */
-    }
-
-    /* Remove any space that might have been reserved for the image */
-    .about .about-text {
-        margin-top: 20px; /* Adjust top margin for better spacing on mobile */
+        font-size: 16px; /* Adjust font size for better readability on mobile */
+        margin-bottom: 10px; /* Maintain spacing between list items */
     }
 }
 
