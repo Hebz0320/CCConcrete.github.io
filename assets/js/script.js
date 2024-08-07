@@ -53,38 +53,6 @@ document.querySelectorAll('.navbar-nav .nav-link, .contact-button').forEach(elem
     });
 });
 
-// Lightbox functionality
-const images = document.querySelectorAll('#carousel .carousel-item img');
-const lightbox = document.createElement('div');
-lightbox.classList.add('lightbox');
-lightbox.innerHTML = `
-    <span class="lightbox-close">&times;</span>
-    <div class="lightbox-content">
-        <img src="" alt="Lightbox Image">
-    </div>
-`;
-document.body.appendChild(lightbox);
-
-const lightboxImage = lightbox.querySelector('.lightbox-content img');
-const lightboxClose = lightbox.querySelector('.lightbox-close');
-
-images.forEach(image => {
-    image.addEventListener('click', () => {
-        lightboxImage.src = image.src;
-        lightbox.style.display = 'block';
-    });
-});
-
-lightboxClose.addEventListener('click', () => {
-    lightbox.style.display = 'none';
-});
-
-window.addEventListener('click', (event) => {
-    if (event.target === lightbox) {
-        lightbox.style.display = 'none';
-    }
-});
-
 // Modal functionality
 const modal = document.getElementById('modal');
 const modalClose = document.querySelector('.modal-close');
