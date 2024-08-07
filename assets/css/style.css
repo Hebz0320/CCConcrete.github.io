@@ -324,11 +324,11 @@ button:hover {
 /* Responsive styling for Carousel Section */
 @media (max-width: 767px) {
     .carousel-inner {
-        max-height: 400px; /* Increase max height for mobile */
+        max-height: 500px; /* Increase max height for mobile */
     }
 
     .carousel-item img {
-        max-height: 400px; /* Ensure images do not exceed the increased maximum height */
+        max-height: 500px; /* Ensure images do not exceed the increased maximum height */
     }
 
     .carousel-control-prev,
