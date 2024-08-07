@@ -229,18 +229,19 @@ button:hover {
 }
 
 /* Carousel Section */
-
 .carousel {
     position: relative;
     width: 100%;
     margin: auto;
+    margin-bottom: 50px; /* Ensure space below the carousel */
 }
 
 .carousel-inner {
     position: relative;
     width: 100%;
     overflow: hidden;
-    max-height: 500px; /* Set the maximum height for the carousel */
+    max-height: 500px; /* Ensure images do not exceed the maximum height */
+    box-sizing: border-box;
 }
 
 .carousel-item {
@@ -251,6 +252,7 @@ button:hover {
     align-items: center;
     justify-content: center;
     transition: transform 0.6s ease-in-out;
+    box-sizing: border-box;
 }
 
 .carousel-item.active {
@@ -259,7 +261,7 @@ button:hover {
 
 .carousel-item img {
     width: 100%;
-    height: 100%; /* Ensure images cover the height */
+    height: 100%;
     max-height: 500px; /* Ensure images do not exceed the maximum height */
     object-fit: contain; /* Ensures the image fits within the container without cropping */
 }
