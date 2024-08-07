@@ -202,7 +202,7 @@ button:hover {
         margin-top: 10px; /* Space above contact button */
     }
 }
-/* Main Section */
+/* Main Section  */
 
 .main h1 {
     margin-top: 100px;
@@ -213,19 +213,6 @@ button:hover {
     color: var(--gray);
     margin-top: 100px;
     font-size: 20px;
-}
-
-/* Responsive styling for Main Section */
-@media (max-width: 767px) {
-    .main h1 {
-        margin-top: 50px; /* Adjust margin for mobile */
-        font-size: 35px; /* Adjust font size for mobile */
-    }
-
-    .main p {
-        margin-top: 20px; /* Adjust margin for mobile */
-        font-size: 18px; /* Adjust font size for mobile */
-    }
 }
 
 /* Carousel Section */
@@ -319,22 +306,6 @@ button:hover {
 
 .carousel-indicators .active {
     background-color: #000;
-}
-
-/* Responsive styling for Carousel Section */
-@media (max-width: 767px) {
-    .carousel-inner {
-        max-height: 400px; /* Increase max height for mobile */
-    }
-
-    .carousel-item img {
-        max-height: 400px; /* Ensure images do not exceed the increased maximum height */
-    }
-
-    .carousel-control-prev,
-    .carousel-control-next {
-        width: 10%; /* Adjust width for better usability on mobile */
-    }
 }
 
 /* Counter Section */
