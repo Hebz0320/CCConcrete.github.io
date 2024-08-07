@@ -1,3 +1,4 @@
+<script>
 // Counter
 document.addEventListener("DOMContentLoaded", () => {
     function counter(id, start, end, duration) {
@@ -84,8 +85,27 @@ window.addEventListener('click', (event) => {
     }
 });
 
+// Modal functionality
+const modal = document.getElementById('modal');
+const modalClose = document.querySelector('.modal-close');
 
+// Open modal example
+document.querySelectorAll('.open-modal').forEach(button => {
+    button.addEventListener('click', () => {
+        modal.style.display = 'block';
+    });
+});
 
+modalClose.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+});
+</script>
 
 
 
