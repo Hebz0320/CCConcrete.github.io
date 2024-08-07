@@ -257,7 +257,7 @@ button:hover {
 .carousel-control-next {
     position: absolute;
     top: 50%;
-    width: 10%; /* Adjust width for better usability on mobile */
+    width: 5%; /* Adjust width for better usability on mobile */
     transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.5);
     border: none;
