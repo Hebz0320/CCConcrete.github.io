@@ -295,12 +295,13 @@ button:hover {
     margin: 0;
 }
 
+/* Default (Mobile) Styles for Indicators */
 .carousel-indicators li {
     position: relative;
     display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin: 1px;
+    width: 12px; /* Larger size for mobile view */
+    height: 12px;
+    margin: 2px;
     background-color: #fff;
     border-radius: 50%;
     cursor: pointer;
@@ -308,6 +309,15 @@ button:hover {
 
 .carousel-indicators .active {
     background-color: #000;
+}
+
+/* Styles for Desktop View */
+@media (min-width: 768px) {
+    .carousel-indicators li {
+        width: 6px; /* Smaller size for desktop view */
+        height: 6px;
+        margin: 3px;
+    }
 }
 
 /* Responsive styling for Carousel Section */
