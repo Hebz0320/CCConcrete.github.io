@@ -1,4 +1,5 @@
 // Counter
+
 document.addEventListener("DOMContentLoaded", () => {
     function counter(id, start, end, duration) {
         let obj = document.getElementById(id),
@@ -23,66 +24,28 @@ document.addEventListener("DOMContentLoaded", () => {
     counter("count4", 0, 7110, 3000);
 });
 
-// Scroll
+
+
+// Scroll 
+
 window.addEventListener('scroll', reveal);
 
-function reveal() {
+function reveal(){
     var reveals = document.querySelectorAll('.reveal');
 
-    for (var i = 0; i < reveals.length; i++) {
+    for(var i =0; i< reveals.length; i++){
+
         var windowheight = window.innerHeight;
         var revealtop = reveals[i].getBoundingClientRect().top;
         var revealpoint = 150;
 
-        if (revealtop < windowheight - revealpoint) {
+        if(revealtop < windowheight - revealpoint){
             reveals[i].classList.add('active');
-        } else {
+        }else{
             reveals[i].classList.remove('active');
         }
     }
 }
-
-// Close the navbar when a link or button is clicked
-document.querySelectorAll('.navbar-nav .nav-link, .contact-button').forEach(element => {
-    element.addEventListener('click', () => {
-        const navbarCollapse = document.getElementById('collapsibleNavId');
-        if (navbarCollapse.classList.contains('show')) {
-            new bootstrap.Collapse(navbarCollapse).hide(); // Use default collapse behavior
-        }
-    });
-});
-
-// Lightbox functionality
-const images = document.querySelectorAll('#carousel .carousel-item img');
-const lightbox = document.createElement('div');
-lightbox.classList.add('lightbox');
-lightbox.innerHTML = 
-    <span class="lightbox-close">&times;</span>
-    <div class="lightbox-content">
-        <img src="" alt="Lightbox Image">
-    </div>
-;
-document.body.appendChild(lightbox);
-
-const lightboxImage = lightbox.querySelector('.lightbox-content img');
-const lightboxClose = lightbox.querySelector('.lightbox-close');
-
-images.forEach(image => {
-    image.addEventListener('click', () => {
-        lightboxImage.src = image.src;
-        lightbox.style.display = 'block';
-    });
-});
-
-lightboxClose.addEventListener('click', () => {
-    lightbox.style.display = 'none';
-});
-
-window.addEventListener('click', (event) => {
-    if (event.target === lightbox) {
-        lightbox.style.display = 'none';
-    }
-});
 
 
 
