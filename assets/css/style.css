@@ -258,7 +258,7 @@ button:hover {
 /* Adjustments for Desktop */
 @media (min-width: 768px) {
     .carousel-inner {
-        padding-bottom: 125%; /* Maintain 4:5 Aspect Ratio */
+        padding-bottom: 100%; /* Maintain 4:5 Aspect Ratio */
     }
 }
 
