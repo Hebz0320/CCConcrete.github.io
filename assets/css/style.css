@@ -252,6 +252,13 @@ button:hover {
     object-fit: cover; /* Ensure images cover the container without causing overflow */
 }
 
+/* Adjustments for Desktop */
+@media (min-width: 768px) {
+    .carousel-inner {
+        padding-top: 33.75%; /* 3:1 Aspect Ratio (adjust as needed) */
+    }
+}
+
 /* Carousel Controls */
 .carousel-control-prev,
 .carousel-control-next {
