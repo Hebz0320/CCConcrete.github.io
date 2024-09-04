@@ -229,7 +229,7 @@ button:hover {
     width: 100%;
     overflow: hidden;
     height: 0;
-    padding-bottom: 60%; /* 4:5 Aspect Ratio for vertical images */
+    padding-bottom: 80%; /* 4:5 Aspect Ratio for vertical images */
 }
 
 .carousel-item {
@@ -258,7 +258,7 @@ button:hover {
 /* Adjustments for Desktop */
 @media (min-width: 768px) {
     .carousel-inner {
-        padding-bottom: 60%; /* Maintain 4:5 Aspect Ratio */
+        padding-bottom: 80%; /* Maintain 4:5 Aspect Ratio */
     }
 }
 
