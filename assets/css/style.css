@@ -447,57 +447,55 @@ button:hover {
 
 /* About Section */
 
+.about {
+    display: flex;            /* Use flexbox for layout */
+    justify-content: center;  /* Center the section horizontally */
+    padding: 20px 0;         /* Add padding for spacing */
+}
+
+.about .about-text {
+    margin: 20px auto;       /* Center with auto margins */
+    max-width: 600px;        /* Limit the maximum width for better readability */
+    text-align: center;      /* Center the text */
+}
+
 .about p {
     color: var(--gray);
 }
 
-/* Center text and control width */
-.about .about-text {
-    margin: 20px auto; /* Center with auto margins */
-    max-width: 600px; /* Limit the maximum width for better readability */
-    text-align: center; /* Center the text */
-}
-
-/* Ensure the section itself is centered */
-.about {
-    display: flex; /* Use flexbox for centering */
-    justify-content: center; /* Center the section */
-    align-items: center; /* Align items vertically if needed */
-    padding: 20px 0; /* Add padding for spacing */
-}
-
 /* Adjust text list items */
 .about .about-text ul {
-    padding-left: 0; /* Remove default padding from the list */
-    margin: 0; /* Remove default margin */
-    text-align: left; /* Align text to the left for the list items */
+    padding-left: 0;         /* Remove default padding */
+    margin: 0;               /* Remove default margin */
+    text-align: left;        /* Align text to the left for list items */
 }
 
 /* Ensure list items are on one line */
 .about .about-text ul li {
-    list-style: none;
-    font-size: 18px; /* Adjust font size for readability */
-    color: var(--gray);
-    margin-bottom: 10px; /* Add spacing between list items */
-    word-wrap: break-word; /* Ensure long words break to fit the container */
+    list-style: none;        /* Remove bullet points */
+    font-size: 18px;         /* Font size */
+    color: var(--gray);      /* Text color */
+    margin-bottom: 10px;     /* Space between items */
+    word-wrap: break-word;   /* Ensure long words break */
 }
 
 /* Responsive styling for Mobile */
 @media (max-width: 767px) {
     .about .about-text {
-        padding: 0 15px; /* Add some padding for better spacing on mobile */
-        text-align: center; /* Center the text */
+        padding: 0 15px;     /* Add padding for better spacing on mobile */
+        text-align: center;   /* Center the text */
     }
 
     .about .about-text ul {
-        padding-left: 0; /* Remove padding for mobile view */
+        padding-left: 0;      /* Remove padding for mobile */
     }
 
     .about .about-text ul li {
-        font-size: 20px; /* Adjust font size for better readability on mobile */
-        margin-bottom: 10px; /* Maintain spacing between list items */
+        font-size: 20px;      /* Font size for better readability on mobile */
+        margin-bottom: 10px;   /* Maintain spacing */
     }
 }
+
 
 /* Service Section  */
 
