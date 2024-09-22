@@ -458,6 +458,14 @@ button:hover {
     text-align: center; /* Center the text */
 }
 
+/* Ensure the section itself is centered */
+.about {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center the section */
+    align-items: center; /* Align items vertically if needed */
+    padding: 20px 0; /* Add padding for spacing */
+}
+
 /* Adjust text list items */
 .about .about-text ul {
     padding-left: 0; /* Remove default padding from the list */
