@@ -465,27 +465,24 @@ button:hover {
 
 /* Adjust text list items */
 .about .about-text ul {
-    padding-left: 0;          /* Remove default padding */
-    margin: 0;                /* Remove default margin */
-    text-align: center;       /* Center the text */
-    display: flex;            /* Use flexbox */
-    flex-direction: column;   /* Stack items vertically */
-    align-items: center;      /* Center items horizontally */
+    padding-left: 0;           /* Remove default padding */
+    margin: 0;                 /* Remove default margin */
+    text-align: center;        /* Center the text */
 }
 
 .about .about-text ul li {
-    list-style: none;         /* Remove bullet points */
-    font-size: 18px;          /* Font size */
-    color: var(--gray);       /* Text color */
-    margin-bottom: 10px;      /* Space between items */
-    word-wrap: break-word;    /* Ensure long words break */
-    display: flex;            /* Use flexbox for alignment */
-    align-items: center;      /* Align items vertically */
-    justify-content: center;   /* Center content horizontally */
+    list-style: none;          /* Remove bullet points */
+    font-size: 18px;           /* Font size */
+    color: var(--gray);        /* Text color */
+    margin-bottom: 10px;       /* Space between items */
+    display: flex;             /* Use flexbox for alignment */
+    align-items: center;       /* Align items vertically */
+    justify-content: center;    /* Center content horizontally */
 }
 
 .about .about-text ul li i {
-    margin-right: 10px;       /* Space between icon and text */
+    margin-right: 10px;        /* Space between icon and text */
+    flex-shrink: 0;            /* Prevent the icon from shrinking */
 }
 
 /* Responsive styling for Mobile */
