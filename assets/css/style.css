@@ -465,9 +465,12 @@ button:hover {
 
 /* Adjust text list items */
 .about .about-text ul {
-    padding-left: 0;         /* Remove default padding */
-    margin: 0;               /* Remove default margin */
-    text-align: left;        /* Align text to the left for list items */
+    padding-left: 0;          /* Remove default padding */
+    margin: 0;                /* Remove default margin */
+    text-align: center;       /* Center the text */
+    display: flex;            /* Use flexbox */
+    flex-direction: column;   /* Stack items vertically */
+    align-items: center;      /* Center items horizontally */
 }
 
 /* Ensure list items are on one line */
