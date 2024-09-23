@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     counter("count1", 60, 100, 2000); // Adding missing parameters
-    counter("count2", 100, 0, 2000);
+    counter("count2", 100, 50, 2000);
     counter("count3", 80, 50, 2000);
     counter("count4", 0, 200, 2000);
 });
